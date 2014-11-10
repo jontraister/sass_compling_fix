@@ -1,0 +1,519 @@
+/* ========================================================================== */
+/*    Forms                                                                   */
+/* ========================================================================== */
+
+form {
+
+    .login {
+
+        legend {
+            border: 0;
+            font-size: 27px;
+            line-height: 30px;
+            margin: 0 0 10px;
+            text-align: center;
+        }
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+
+        &.append {
+            margin-right: 30px;
+        }
+
+        label {
+            color: #55606e;
+            position: relative;
+
+            &.required {
+
+                &:after {
+                    color: $brand-warning;
+                    content: '\002a';
+                    margin-left: .5ex;
+                }
+            }
+        }
+
+        .controls {
+            margin-top: 8px;
+        }
+
+        .radio-label {
+
+            &.required {
+
+                &:after {
+                    color: $brand-warning;
+                    content: '\002a';
+                    margin-left: .5ex;
+                }
+            }
+
+            span {
+                color: $brand-warning;
+            }
+        }
+
+        .duplicate-group {
+            margin: 8px 0;
+
+            &:first-of-type {
+                margin: 0;
+            }
+        }
+    }
+
+    .help {
+        //color: #a7abb1; color changed to black per Jason's request
+		color: #000000;
+        display: block;
+        font-size: 11px;
+    }
+
+    .error {
+        color: $brand-danger;
+        font-size: 12px;
+    }
+
+    .form-control {
+        @include box-shadow(none);
+        border: 1px solid #e5e9ec;
+        font-size: 13px;
+
+        &[disabled],
+        &[readonly] {
+            background-color: $lightest;
+        }
+    }
+
+    p {
+
+        &.required {
+            margin-bottom: 0;
+            text-align: right;
+
+            &:before {
+                color: $brand-warning;
+                content: '\002a';
+            }
+
+            span {
+                color: $brand-warning;
+            }
+        }
+    }
+
+    .ui-state-error {
+        background: $brand-danger-light !important;
+    }
+
+    input,
+    textarea {
+
+        &.placeholder {
+            color: #aaa!important;
+        }
+    }
+
+    .radio {
+
+        label {
+            font-weight: 300;
+        }
+    }
+
+    input,
+    select {
+
+        &.xsmall {
+            width: 50px;
+        }
+
+        &.small {
+            width: 120px;
+        }
+
+        &.medium {
+            width: 206px;
+        }
+
+        &.large {
+            width: 320px;
+        }
+
+        &.inline {
+            display: inline-block;
+        }
+    }
+
+    input[type=number] {
+        @include appearance(textfield);
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            @include appearance(none);
+            margin: 0;
+        }
+
+        &::-o-inner-spin-button,
+        &::-o-outer-spin-button {
+            @include appearance(none);
+            margin: 0;
+        }
+    }
+
+    &.form-inline {
+
+        .form-group {
+
+            label {
+                margin: 0 1ex 0 15px;
+            }
+
+            &:first-child {
+
+                label {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    .custom-checkbox {
+        color: $base-color !important;
+
+        input {
+            margin-right: 5px;
+        }
+    }
+}
+.form-control {
+
+    &[type=radio],
+    &[type=checkbox] {
+        @include inline-block;
+        height: auto;
+        width: auto;
+    }
+}
+.form-striped > fieldset:nth-child(odd),
+.form-striped-reversed > fieldset:nth-child(even) {
+    background-color: #f0f6f8;
+
+    .content-inner {
+        @include background(transparent);
+    }
+}
+.input-append,
+.input-prepend {
+    border: 0;
+    display: block;
+
+    .add-on {
+        $color: #e5e5e5;
+        $height: 24px;
+
+        @include inline-block;
+        @include border-radius(0 2px 2px 0);
+        //@include text-shadow(0 1px 0 $white);
+        //background-color: $color;
+        background-color: #d1dade;
+        //border: 1px solid $color;
+        border: 1px solid #d1dade;
+        color: $color;
+        font-size: 14px;
+        font-weight: 400;
+        height: 37px;
+        line-height: $height;
+        //height: $height;
+        //min-width: 16px;
+        min-width: 34px;
+        //padding: 4px 5px;
+        //padding-right: 10px;
+        //padding-left: 10px;
+        //padding-top: 6px;
+        padding: 6px 10px 5px;
+        position: absolute;
+        text-align: center;
+        width: auto;
+    }
+
+    input {
+
+        &,
+        [class*=span] {
+            display: inline-block!important;
+            float: left;
+            width: 100%;
+        }
+
+        [class*=span] {
+            @include border-radius(2px);
+            @include border-top-right-radius(0);
+            @include border-bottom-right-radius(0);
+            padding-left: 16px;
+        }
+    }
+}
+.input-append {
+
+    .add-on {
+
+        > .halflings-icon,
+        > i,
+        > .fa {
+            margin-left: 0;
+            margin-top: 5px;
+        }
+
+        .arrow {
+            background-color: transparent!important;
+            color: #d1dade;
+            font-size: 26px;
+            left: -6px;
+            position: absolute;
+            z-index: 100;
+
+            &:before {
+                @include font-awesome-icon;
+                content: '\f0d9 ';
+            }
+        }
+    }
+
+    &.primary {
+
+        .add-on {
+
+            .arrow {
+                color: $brand-primary;
+            }
+        }
+    }
+
+    &.success {
+
+        .add-on {
+
+            .arrow {
+                color: $brand-success;
+            }
+        }
+    }
+
+    &.info {
+
+        .add-on {
+
+            .arrow {
+                color: $brand-info;
+            }
+        }
+    }
+
+    &.warning {
+
+        .add-on {
+
+            .arrow {
+                color: $brand-warning;
+            }
+        }
+    }
+
+    &.danger {
+
+        .add-on {
+
+            .arrow {
+                color: $brand-danger;
+            }
+        }
+    }
+
+    .add-on:last-child,
+    .btn:last-child,
+    .btn-group:last-child > .dropdown-toggle {
+        @include border-radius(0 2px 2px 0);
+    }
+
+    &,
+    :focus {
+        border-right: 0!important;
+    }
+
+    .form-control {
+        @include inline-block;
+    }
+
+    input {
+
+        &[class*=span] {
+            border-right: 0;
+        }
+    }
+}
+.input-prepend {
+
+    .add-on {
+
+        > i,
+        > .fa {
+            margin-left: 3px;
+            margin-top: 5px;
+        }
+    }
+
+    &.inside .add-on,
+    .btn {
+
+        &:first-child {
+            @include transition-duration(.2s);
+            @include transition-property(border, box-shadow, color, background);
+            @include transition-timing-function(linear);
+            @include transition-delay(0s);
+            @include border-radius(2px);
+            background-color: $white;
+            border: 1px solid #e5e9ec;
+            color: #9ea9b2;
+            left: 3px;
+            padding-left: 8px;
+            padding-right: 4px;
+            padding-top: 4px;
+            position: relative;
+            top: 0;
+        }
+    }
+
+    &.inside.no-border .add-on,
+    &.no-border .btn {
+
+        &:first-child {
+            border: none;
+        }
+    }
+
+    input {
+
+        &[class*=span] {
+            border-left: 0;
+        }
+    }
+}
+.input-append.primary .add-on,
+.input-prepend .add-on {
+    background-color: $brand-primary;
+    color: $white;
+}
+.input-append.success .add-on,
+.input-prepend .add-on {
+    @include inline-block;
+    background-color: $brand-success;
+    color: $white;
+    float: left;
+}
+.input-append.info .add-on,
+.input-prepend .add-on {
+    background-color: $brand-info;
+    color: $white;
+}
+.input-append.warning .add-on,
+.input-prepend .add-on {
+    background-color: $brand-warning;
+    color: $white;
+}
+.input-append.danger .add-on,
+.input-prepend .add-on {
+    background-color: $brand-danger;
+    color: $white;
+}
+.column-seperation {
+
+    > div {
+
+        &[class*="col-"] {
+            border-right: 1px solid #ddd;
+
+            &:last-child {
+                border-right: 0;
+            }
+        }
+    }
+}
+.input-with-icon {
+    position: relative;
+
+    input {
+        padding-left: 32px;
+    }
+
+    i {
+        color: #e5e9ec;
+        display: block;
+        font-size: 16px;
+        height: 16px;
+        margin: 9px 2px 4px 10px;
+        position: absolute;
+        text-align: center;
+        width: 16px;
+    }
+
+    &.right {
+
+        input {
+            padding-left: 12px;
+            padding-right: 33px;
+        }
+
+        i {
+            float: right;
+            right: 8px;
+        }
+    }
+}
+.input-group {
+    font-size: 14px;
+
+    input {
+        min-height: 32px;
+    }
+}
+.dropdown-menu {
+
+    > .active {
+
+        > a {
+
+            > label {
+                color: $white;
+            }
+        }
+    }
+}
+.radio-margin {
+	margin-top: 30px;
+	}
+.no-wrap {
+	white-space:nowrap;
+	}
+.invisible {
+	visibility:hidden;
+	}
+.ssn-dash {
+	background: url('https://uat.mysmartmove.com/web/sites/SmartMove/login/img/dash.png') no-repeat 100% 50%;
+}
+.ssn-dash-padding {
+	background: url('https://uat.mysmartmove.com/web/sites/SmartMove/login/img/dash.png') no-repeat 100% 70%;
+	}
+#SSNPiece1, SSNPiece2 {
+	float:left;
+	}
+  /* Added for dases with input */
+.content-inner .row .col-sm-4.col-md-4 .row .col-sm-3.col-md-3 { float:left; width:25%;}
+.content-inner .row .col-sm-4.col-md-4 .row .col-sm-6.col-md-6 { float:left; width:50%;}
+.ssn-mobile { float:none !important; width:100% !important; }
+.ssn-dash  input { width:100% !important;  }
+
+

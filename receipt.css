@@ -1,0 +1,487 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*@font-face {
+    font-family: 'open_sansbold';
+    src: url('font/opensans-bold-webfont.eot');
+    src: url('font/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         ura('font/opensans-bold-webfont.woff2') format('woff2'),
+         url('font/opensans-bold-webfont.woff') format('woff'),
+         url('font/opensans-bold-webfont.ttf') format('truetype'),
+         url('font/opensans-bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('font/opensans-regular-webfont.eot');
+    src: url('font/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/opensans-regular-webfont.woff2') format('woff2'),
+         url('font/opensans-regular-webfont.woff') format('woff'),
+         url('font/opensans-regular-webfont.ttf') format('truetype'),
+         url('font/opensans-regular-webfont.svg#Open Sans') format('svg');
+    font-weight: normal;
+    font-style: normal;
+a
+}*/
+body {
+    margin: 0px;
+    padding: 0px;
+	/*font-family:Arial, Helvetica, sans-serif;*/
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.clear {
+    margin: 0px;
+    padding: 0px;
+    clear: both;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+a img, img {
+    outline: none;
+    border: none;
+}
+
+#wrapper {
+    width: 780px;
+    margin: auto;
+    background-color: #fff;
+}
+
+#header_outer {
+    background: #444444;
+    padding: 10px 15px;
+}
+
+#header_left {
+    float: left;
+}
+
+#header_right {
+    float: right;
+    font-size: 10pt;
+    color: #fff;
+    text-align: right;
+    line-height: 12px;
+}
+
+#header_right h3 {
+    margin: 0px;
+    font-size: 10px;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    color: #fff;
+}
+
+#header_right h4 {
+    margin: 0px;
+    font-size: 10px;
+    font-family: 'Open Sans';
+    font-weight: normal;
+    color: #fff;
+}
+
+.container_outer {
+    padding: 30px 15px 0;
+}
+
+.content_part1 {
+    border-bottom: 1px solid #d6d6d6;
+    padding: 0 0 32px 0;
+}
+
+.content_part1 ul li {
+    list-style-type: none;
+    color: #444444;
+}
+
+.left_part1 {
+    width: 79%;
+    float: left;
+    font-size: 12px;
+    font-family: 'Open Sans';
+}
+
+.right_part1 {
+    width: 21%;
+    float: left;
+    font-size: 12px;
+    font-family: 'Open Sans';
+}
+
+.partsize .left_part1 {
+    font-size: 18px;
+    font-family: 'Open Sans';
+    line-height: 14px;
+}
+
+.left_part1t {
+    width: 79%;
+    float: left;
+    font-size: 12px;
+    font-family: 'Open Sans';
+    font-weight: 700;
+}
+
+.partsize .right_part1 {
+    font-size: 18px;
+    font-family: 'Open Sans';
+    line-height: 21px;
+}
+
+.totl {
+    background: #e5f4f9;
+}
+
+.content_part2 {
+    border-bottom: 1px solid #d6d6d6;
+    padding: 15px 0;
+}
+
+.content_part2 h3 {
+    color: #363636;
+    font-size: 18px;
+    margin: 0px;
+    font-family: 'Open Sans';
+    line-height: 30px;
+    font-weight: normal;
+}
+
+.content_part2 span {
+    font-size: 10px;
+    color: #363636;
+    font-family: 'Open Sans';
+    font-weight: 700;
+}
+
+.content_part2 p {
+    margin: 0px;
+    color: #000;
+    font-size: 12px;
+    font-family: 'Open Sans';
+    line-height: 13px;
+}
+
+.innerpart21 {
+    width: 232px;
+    float: left;
+}
+
+.innerpart22 {
+    width: 178px;
+    float: left;
+}
+
+.innerpart23 {
+    width: 185px;
+    float: left;
+}
+
+.innerpart24 {
+    width: 148px;
+    float: left;
+}
+
+.content_part2:last-child {
+    border-bottom: medium none;
+}
+
+.negitive {
+    margin-left: -4px;
+}
+
+.zeebra {
+    background-color: #f8fdfe;
+}
+.print_title {
+    display: none;
+    font-size: 16px;
+}
+
+
+/*START RESPONSIVE CSS*/
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width: 790px) {
+    #wrapper {
+        width: 95%;
+    }
+
+    .innerpart21 {
+        width: 27%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .innerpart24 {
+        width: 23%;
+    }
+
+    .innerpart23 {
+        width: 27%;
+    }
+
+    .innerpart22 {
+        width: 25%;
+    }
+
+    .innerpart21 {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .content_part2 p {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    #wrapper {
+        width: 90%;
+    }
+
+    #header_left {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    #header_right {
+        color: #fff;
+        float: none;
+        font-size: 10pt;
+        padding: 10px 0;
+        text-align: center;
+        width: 100%;
+        margin: 0 0 0 10%;
+    }
+
+    .left_part1 {
+        font-size: 10px;
+    }
+
+    .content_part2 h3 {
+        text-align: left;
+        padding: 0 0 10px;
+    }
+
+    #header_right h3 {
+        display: block;
+        float: left;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .left_part1 {
+        width: 77%;
+    }
+
+    .left_part1t {
+        width: 77%;
+    }
+
+    .innerpart21 {
+        text-align: left;
+        width: 50%;
+    }
+
+    .innerpart22 {
+        text-align: left;
+        width: 50%;
+    }
+
+    .innerpart23 {
+        text-align: left;
+        width: 51%;
+        padding-top: 15px;
+    }
+
+    .innerpart24 {
+        text-align: left;
+        width: 49%;
+        padding-top: 15px;
+    }
+
+    #header_left img {
+        width: 90%;
+    }
+
+    #header_right h3 {
+        margin: 0 0 0 20px !important;
+        display: block;
+        float: left;
+    }
+
+    #header_right {
+        margin: 0 0 0 10%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .innerpart22 {
+        padding: 5px 0;
+        text-align: left;
+        width: 100%;
+    }
+
+    .innerpart21 {
+        padding: 5px 0;
+        text-align: left;
+        width: 100%;
+    }
+
+    .innerpart23 {
+        padding: 5px 0;
+        text-align: left;
+        width: 100%;
+    }
+
+    .innerpart24 {
+        padding: 5px 0;
+        text-align: left;
+        width: 100%;
+    }
+
+    #header_right h3 {
+        display: block;
+        float: left;
+    }
+
+    #header_right {
+        width: 92%;
+        margin: 0 auto 0 auto;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #header_outer {
+        padding: 10px;
+    }
+
+    .right_part1 {
+        font-size: 11px !important;
+    }
+
+    .left_part1 {
+        line-height: 10px  !important;
+        margin-bottom: 5px;
+    }
+}
+
+/*CHase Validation CSS*/
+
+.chase-errors {
+    position: absolute;
+    color: #db1111;
+}
+
+#chasecontainer {
+    position: relative;
+    /*left: 27px; this breakks the layout*/
+}
+
+#errorBelowName {
+    top: 92px;
+    left: 27px;
+}
+
+#errorBelowCCType {
+    top: 72%;
+    left: 27px;
+}
+
+#errorBelowNumber {
+    top: 539px;
+    left: 27px;
+}
+
+#errorBelowCVV {
+    top: 625px;
+    left: 27px;
+}
+
+#errorBelowExpiration {
+    top: 822px;
+    left: 27px;
+}
+
+#errorBelowAmount {
+}
+
+#errorBelowAddress1 {
+    top: 179px;
+    left: 27px;
+}
+
+#errorBelowCity {
+    top: 351px;
+    left: 27px;
+}
+
+#errorBelowState {
+    top: 35%;
+    left: 27px;
+}
+
+#errorBelowZip {
+   top: 453px;
+   right: 28px;
+}
+
+#errorBelowCountry {
+    top: 9.1%;
+    left: 27px;
+}
+
+@media (max-width: 375px) {
+    #errorBelowZip {
+        right: 28px !important;
+        }
+}
+
+@media (min-width: 1700px) {
+    #errorBelowZip {
+        left: 1193px !important;
+        }
+}
+
+@media (min-width: 790px) {
+    .receipt-content {
+        width:100%
+        }
+}
+@media (min-width: 791px) {
+    .receipt-content {
+        width:136%;
+        margin-left: -102px !important;
+        }
+}
+
+@-moz-document url-prefix() { 
+    #errorBelowName { top: 93px;}
+    #errorBelowAddress1 { top: 181px;}
+    #errorBelowCity { top: 354px;}
+    #errorBelowZip { top: 460px;}
+    #errorBelowNumber { top: 546px;}
+    #errorBelowCVV { top: 633px;}
+    #errorBelowExpiration { top: 835px;}
+}
+
+/*ALignment fix for iphones*/
+@media screen and (max-width: 375px) {
+       #errorBelowName {top: 98px !important;} 
+       #errorBelowAddress1 {top: 187px !important;} 
+       #errorBelowCity {top: 371px !important;} 
+       #errorBelowZip {top: 468px !important;}
+       #errorBelowNumber { top: 563px;}
+       #errorBelowCVV { top: 650px;}
+       #errorBelowExpiration { top: 850px;}
+}

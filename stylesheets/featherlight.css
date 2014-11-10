@@ -1,0 +1,56 @@
+/*
+Syntax error: Invalid CSS after "	&": expected "{", was "-bg {"
+              
+              "-bg" may only be used at the beginning of a compound selector.
+        on line 10 of C:/Users/jtraist/Documents/Jon's Docs/SmartMove/_STAGING/CMS00/cache/default/main/SmartMove/WORKAREA/SmartMove/sites/SmartMove/css/sass/featherlight.scss
+
+Backtrace:
+C:/Users/jtraist/Documents/Jon's Docs/SmartMove/_STAGING/CMS00/cache/default/main/SmartMove/WORKAREA/SmartMove/sites/SmartMove/css/sass/featherlight.scss:10
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/scss/parser.rb:1146:in `expected'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/scss/parser.rb:1083:in `expected'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/scss/parser.rb:691:in `simple_selector_sequence'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/scss/parser.rb:1093:in `throw_error'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/scss/parser.rb:691:in `simple_selector_sequence'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/scss/parser.rb:639:in `_selector'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/scss/parser.rb:618:in `selector'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/scss/parser.rb:602:in `selector_sequence'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/scss/parser.rb:527:in `ruleset'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/scss/parser.rb:590:in `declaration_or_ruleset'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/scss/parser.rb:1103:in `catch_error'
+org/jruby/RubyKernel.java:1212:in `catch'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/scss/parser.rb:1103:in `catch_error'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/scss/parser.rb:590:in `declaration_or_ruleset'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/scss/parser.rb:553:in `block_child'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/scss/parser.rb:542:in `block_contents'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/scss/parser.rb:534:in `block'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/scss/parser.rb:528:in `ruleset'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/scss/parser.rb:552:in `block_child'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/scss/parser.rb:545:in `block_contents'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/scss/parser.rb:82:in `stylesheet'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/scss/parser.rb:27:in `parse'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/engine.rb:342:in `_to_tree'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/engine.rb:315:in `_render'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_common/sass-3.2.10/lib/sass/../sass/engine.rb:262:in `render'
+file:/C:/Users/jtraist/Desktop/compass.app/compass-app.jar!/compass_patch.rb:60:in `compile'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+file:/C:/Users/jtraist/Desktop/compass.app/compass-app.jar!/compass_patch.rb:59:in `compile'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+file:/C:/Users/jtraist/Desktop/compass.app/compass-app.jar!/compass_patch.rb:58:in `compile'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:103:in `run'
+org/jruby/RubyArray.java:1620:in `each'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:101:in `run'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_0.12/backport_from_0.13/lib/compass/watcher/compiler.rb:25:in `compile'
+org/jruby/RubyKernel.java:2105:in `send'
+(__FORWARDABLE__):3:in `compile'
+file:/C:/Users/jtraist/Desktop/compass.app/compass-app.jar!/app_watcher.rb:40:in `watch!'
+file:/C:/Users/jtraist/Desktop/compass.app/compass-app.jar!/ui/tray.rb:447:in `watch'
+org/jruby/RubyProc.java:270:in `call'
+org/jruby/RubyProc.java:224:in `call'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"	&\": expected \"{\", was \"-bg {\"\A               \A               \"-bg\" may only be used at the beginning of a compound selector.\A         on line 10 of C:/Users/jtraist/Documents/Jon's Docs/SmartMove/_STAGING/CMS00/cache/default/main/SmartMove/WORKAREA/SmartMove/sites/SmartMove/css/sass/featherlight.scss"; }

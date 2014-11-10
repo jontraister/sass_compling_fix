@@ -1,0 +1,84 @@
+/* ==========================================================================
+	Titles
+============================================================================= */
+
+.page-title {
+    color: #666;
+    margin: 0 0 10px;
+    //padding: 0;
+
+    h1 {
+        @include inline-block;
+        font-size: 24px;
+        font-weight: 500;
+        position: relative;
+    }
+
+    &,
+    small,
+    a {
+        display: block;
+    }
+
+    small {
+        color: #888;
+        font-size: $body-font-size;
+        font-weight: 300;
+        letter-spacing: 0;
+        line-height: $body-line-height;
+        margin-top: 10px;
+    }
+
+    a {
+        font-size: 12px;
+        font-weight: 600;
+        text-decoration: none;
+
+        i {
+            margin-right: 5px;
+        }
+
+        &.icon {
+
+            &:before {
+                @include inline-block(baseline);
+                @include font-awesome-icon;
+                font-weight: normal;
+                margin-right: 1ex;
+            }
+        }
+
+        &[data-toggle=modal] {
+            @include user-select(none);
+            cursor: pointer;
+        }
+    }
+
+    ul {
+        padding-left: 0;
+
+        &.tools {
+            float: right;
+            list-style-type: none;
+            margin: 10px 0;
+            text-align: left;
+
+            li {
+                border-bottom: 1px solid #ddd;
+                padding-left: 0;
+
+                a {
+                    padding: 5px 0;
+                }
+
+                &:last-child {
+                    border-bottom: 0;
+
+                    a {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

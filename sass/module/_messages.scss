@@ -1,0 +1,65 @@
+/* ==========================================================================
+    Messages
+============================================================================= */
+
+.alert,
+.badge {
+    @include text-shadow(none);
+}
+.alert {
+    @include box-shadow(none);
+    @include border-radius(3px);
+    background-color: $brand-warning-light;
+    background-image: none;
+    color: $base-color-light;
+    padding: 10px 15px;
+    position: relative;
+}
+.alert-primary,
+.alert-success,
+.alert-info,
+.alert-danger,
+.alert-error {
+    color: $base-color-light;
+}
+.alert-primary {
+    background-color: $brand-primary-light;
+    border-color: $brand-primary-light;
+}
+.alert-success {
+    background-color: $brand-success-light;
+    border-color: $brand-success-light;
+}
+.alert-info {
+    background-color: $brand-info-light;
+    border-color: $brand-info-light;
+}
+.alert-danger,
+.alert-error {
+    background-color: $brand-danger-light;
+    border-color: $brand-danger-light;
+}
+.bg-primary {
+    background-color: $brand-primary-light;
+    color: $gray;
+}
+.bg-success {
+    background-color: $brand-success-light;
+}
+.bg-info{
+    background-color: $brand-info-light;
+}
+.bg-warning{
+    background-color: $brand-warning-light;
+}
+.bg-danger{
+    background-color: $brand-danger-light;
+}
+.badge {
+    background-color: $brand-success;
+    color: $white;
+    font-family: $base-font-family;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 10px;
+}

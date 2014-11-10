@@ -1,0 +1,56 @@
+/* ==========================================================================
+	Highlight
+============================================================================= */
+
+.highlight {
+	border: 1px solid $lighter;
+
+	&.thin {
+		margin: 0 40px;
+	}
+
+	.table {
+		margin-bottom: 0;
+
+		thead {
+			background-color: $brand-primary;
+
+			h3 {
+                color: $white;
+                font-size: 14px;
+                font-weight: 500;
+                margin: 8px 0;
+                text-transform: none;
+            }
+		}
+
+		tbody {
+
+			tr {
+
+				&:nth-child(2n+1) {
+					background-color: $alternating;
+					border: 0;
+				}
+
+				&.light-row {
+					background-color: $white;
+				}
+
+				td {
+					border: 0;
+				}
+			}
+		}
+
+		tfoot {
+
+			td {
+				@include border-radius(0);
+				background-color: $gray;
+				color: $white;
+				text-align: right;
+			}
+		}
+	}
+}

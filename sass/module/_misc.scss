@@ -1,0 +1,86 @@
+/* ==========================================================================
+	Misc
+============================================================================= */
+
+.pace {
+
+    .pace-activity {
+        right: 28px;
+        top: 62px;
+    }
+}
+.loading-animator {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    @include animation(pace-spinner 400ms linear infinite);
+    @include border-image(none);
+    @include border-radius(10px);
+    border: 2px solid;
+    border-color: rgba(0,0,0,.4) rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,.4);
+    display: block;
+    height: 14px;
+    margin-left: 40%;
+    width: 14px;
+    z-index: #{$top-z-index/10000 * 2};
+}
+.scrollup {
+    @include user-select(none);
+    @include border-radius(5px);
+    background-color: #2d3139;
+    bottom: 92px;
+    cursor: pointer;
+    display: none;
+    font-size: 0;
+    height: 27px;
+    left: 235px;
+    position: fixed;
+    //text-indent: -9999px;
+    width: 27px;
+    z-index: #{$top-z-index/10 + 1};
+
+    &:after {
+        $dim: 4px;
+
+        border-color: transparent;
+        border-bottom-color: #8b91a0;
+        border-style: solid;
+        border-width: 0 $dim #{$dim + 1};
+        content: '';
+        height: 0;
+        left: 50%;
+        margin: -#{$dim - 1} 0 0 -#{$dim - 1};
+        position: absolute;
+        top: 50%;
+        width: 0;
+    }
+
+    &,
+    &:focus {
+        outline: 0 none;
+    }
+
+    &:hover {
+        background-color: #393d46;
+
+        &:after {
+            border-bottom-color: #c2c7d5;
+        }
+    }
+
+    &.to-edge {
+        bottom: 65px;
+        left: 5px;
+    }
+}
+.sr-only {
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}

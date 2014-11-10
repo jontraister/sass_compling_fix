@@ -1,0 +1,121 @@
+/* ==========================================================================
+	Footer
+============================================================================= */
+
+.footer-widget {
+    $height: 60px;
+
+    @include user-select(none);
+    @include background(#232323);
+    bottom: 0;
+    clear: both;
+    display: block;
+    font-size: 11px;
+    line-height: $height;
+    min-height: $height;
+    //left: $left-sidebar-width;
+    //padding: 11px 11px 11px 265px;
+    padding: 0 11px;
+    padding-left: #{$left-sidebar-width + 11};
+    right: 0;
+    position: fixed;
+    width: 100%;
+    z-index: #{$top-z-index/100000};
+
+    .sidr-animating &,
+    .sidr-open & {
+        right: auto;
+    }
+
+    a,
+    p {
+        @include user-select(text);
+        color: $white;
+    }
+
+    a {
+        text-decoration: underline;
+
+        &:hover {
+            color: #8b91a0;
+        }
+    }
+
+    .logo {
+        @include user-select(none);
+        @include inline-block;
+        background-size: 100% auto;
+        margin: 0 10px 0 0;
+        min-width: 130px;
+        text-decoration: none;
+    }
+
+    i {
+        color: #5e646d;
+        font-size: 14px;
+    }
+
+    p,
+    ul,
+    li {
+        @include inline-block(baseline);
+    }
+
+    p,
+    ul {
+        line-height: normal;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    ul,
+    li {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    ul {
+        //margin-top: 10px;
+        margin: 0;
+    }
+
+    li {
+        margin-right: 14px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .logout {
+        display: none;
+
+        a {
+            text-transform: uppercase;
+        }
+
+        .icon {
+            padding-left: 20px;
+
+            &:before {
+                //content: '\f011';
+                //margin-right: 5px;
+            }
+        }
+    }
+
+    &.full-width {
+        padding-left: 15px;
+    }
+
+    &.sidr-right {
+        //left: -#{$left-sidebar-width};
+    }
+
+    &.sidr-left {
+        //left: $left-sidebar-width;
+        //padding-left: 11px;
+    }
+}

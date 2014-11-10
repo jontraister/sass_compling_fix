@@ -1,0 +1,77 @@
+/* ==========================================================================
+	Sprites
+============================================================================= */
+
+//DYNAMICALLY CREATED SPRITES
+//[class^="sprite-"],
+//[class*=" sprite-"] {
+//  @include inline-block;
+//  @include background-image(sprite-url($sprites));
+//  background-repeat: no-repeat;
+
+//  @include breakpoint(retina1.5) {
+//    @include background-image(sprite-url($sprites2x));
+//    background-size: ceil(image-width(sprite-path($sprites2x)) / 2) auto;
+//  }
+//}
+
+//NEW STATIC SPRITES
+.sprite {
+  @include inline-block;
+  background-image: url(/img/icons-sdfe1bc2b06.png);
+  background-repeat: no-repeat;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5) {
+
+  .sprite {
+    background-image: url(/img/icons-2x-sd2ae0921e8.png);
+    background-size: 75px auto;
+  }
+}
+
+.sprite-holder {
+  @include background-image(none);
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+
+  ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 300px;
+
+    li {
+      float:left;
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.sprite-hackersafe {
+  //@include sprite-background(hackersafe);
+  background: url(../img/icons-sdfe1bc2b06.png) no-repeat;
+  background-position: 0 0px;
+  height: 40px;
+  overflow: hidden;
+  width: 76px;
+}
+.sprite-truste {
+  //@include sprite-background(truste);
+  background: url(../img/icons-sdfe1bc2b06.png) no-repeat;
+  background-position: 0 -41px;
+  height: 40px;
+  overflow: hidden;
+  width: 76px;
+}
+.sprite-verisign {
+  //@include sprite-background(verisign);
+  background: url(../img/icons-sdfe1bc2b06.png) no-repeat;
+  background-position: 0 -79px;
+  height: 40px;
+  overflow: hidden;
+  width: 76px;
+}

@@ -1,0 +1,923 @@
+@import "compass";
+@import "compass/css3";
+
+@import "utilities/variables";
+@import "utilities/mixins";
+
+/* Magnific Popup CSS */
+.mfp {
+
+	&.bg {
+		@include opacity(.8);
+		background: #0b0b0b;
+		height: 100%;
+		left: 0;
+		overflow: hidden;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: #{$top-z-index/10000 + 42};
+	}
+
+	&.wrap {
+		-webkit-backface-visibility: hidden;
+		height: 100%;
+		left: 0;
+		outline: none !important;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: #{$top-z-index/10000 + 43};
+	}
+
+	&.container {
+		@include box-sizing(border-box);
+		height: 100%;
+		left: 0;
+		padding: 0 8px;
+		position: absolute;
+		text-align: center;
+		top: 0;
+		width: 100%;
+
+		&:before {
+			@include inline-block;
+			content: '';
+			height: 100%;
+
+			.mfp-align-top & {
+				display: none;
+			}
+		}
+	}
+
+	&.content {
+		@include inline-block;
+		margin: 0 auto;
+		position: relative;
+		text-align: left;
+		z-index: #{$top-z-index/10000 + 45};
+
+		.mfp-inline-holder &,
+		.mfp-ajax-holder & {
+			cursor: auto;
+			width: 100%;
+		}
+
+		.mfp-s-error & {
+			display: none;
+		}
+
+		.mfp-image-holder & {
+			max-width: 100%;
+		}
+	}
+
+	&.ajax-cur {
+		cursor: progress;
+	}
+
+	&.zoom {
+
+		&.out-cur {
+
+			&,
+			& .mfp-image-holder .mfp-close {
+				cursor: -moz-zoom-out;
+				cursor: -webkit-zoom-out;
+				cursor: zoom-out;
+			}
+		}
+		cursor: pointer;
+		cursor: -webkit-zoom-in;
+		cursor: -moz-zoom-in;
+		cursor: zoom-in;
+	}
+
+	&.auto-cursor {
+
+		.mfp-content {
+			cursor: auto;
+		}
+	}
+
+	&.close,
+	&.arrow,
+	&.preloader,
+	&.counter {
+		@include user-select(none);
+	}
+
+	&.loading.mfp-figure {
+		display: none;
+	}
+
+	&.hide {
+		display: none!important;
+	}
+
+	&.preloader {
+		color: #ccc;
+		left: 8px;
+		margin-top: -0.8em;
+		position: absolute;
+		right: 8px;
+		text-align: center;
+		top: 50%;
+		width: auto;
+		z-index: #{$top-z-index/10000 + 44};
+
+		a {
+			color: #ccc;
+
+			&:hover {
+				color: $white;
+			}
+		}
+
+		.mfp-s-ready & {
+			display: none;
+		}
+	}
+
+	&.close {
+		$width: 44px;
+
+		@include opacity(.65);
+		color: $white;
+		font-family: Arial, Baskerville, monospace;
+		font-size: 28px;
+		font-style: normal;
+		height: $width;
+		line-height: $width;
+		padding: 0 0 18px 10px;
+		position: absolute;
+		right: 0;
+		text-align: center;
+		text-decoration: none;
+		top: 0;
+		width: $width;
+
+		&:hover,
+		&:focus {
+			@include opaque;
+		}
+
+		&:active {
+			top: 1px;
+		}
+
+		.mfp-close-btn-in & {
+			color: #333;
+		}
+
+		.mfp-image-holder &,
+		.mfp-iframe-holder & {
+			$padding: 6px;
+
+			color: $white;
+			padding-right: $padding;
+			right: -#{$padding};
+			text-align: right;
+			width: 100%;
+		}
+	}
+
+	&.counter {
+		color: #ccc;
+		font-size: 12px;
+		line-height: 18px;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	&.arrow {
+		@include tap-highlight-color;
+		@include opacity(.65);
+		height: 110px;
+		margin: 0;
+		margin-top: -55px;
+		padding: 0;
+		position: absolute;
+		top: 50%;
+		width: 90px;
+
+		&:active {
+			margin-top: -54px;
+		}
+
+		&:hover,
+		&:focus {
+			@include opaque;
+		}
+
+		&:before,
+		&:after,
+		.mfp-b,
+		.mfp-a {
+			border: medium inset transparent;
+			content: '';
+			display: block;
+			height: 0;
+			left: 0;
+			margin-left: 35px;
+			margin-top: 35px;
+			position: absolute;
+			top: 0;
+			width: 0;
+		}
+
+		&:after,
+		.mfp-a {
+			border-bottom-width: 13px;
+			border-top-width: 13px;
+			top: 8px;
+		}
+
+		&:before,
+		.mfp-b {
+			@include opacity(.7);
+			border-bottom-width: 21px;
+			border-top-width: 21px;
+		}
+
+		&.left {
+			left: 0;
+
+			&:after,
+			.mfp-a {
+				border-right: 17px solid $white;
+				margin-left: 31px;
+			}
+
+			&:before,
+			.mfp-b {
+				border-right: 27px solid #3f3f3f;
+				margin-left: 25px;
+			}
+		}
+
+		&.right {
+			right: 0;
+
+			&:after,
+			.mfp-a {
+				border-left: 17px solid $white;
+				margin-left: 39px;
+			}
+
+			&:before,
+			.mfp-b {
+				border-left: 27px solid #3f3f3f;
+			}
+		}
+	}
+
+	&.iframe-holder {
+		padding-bottom: 40px;
+		padding-top: 40px;
+
+		.mfp-content {
+			line-height: 0;
+			max-width: 900px;
+			width: 100%;
+		}
+
+		.mfp-close {
+			top: -40px;
+		}
+	}
+
+	&.iframe-scaler {
+		height: 0;
+		overflow: hidden;
+		padding-top: 56.25%;
+		width: 100%;
+
+		iframe {
+			@include box-shadow(0 0 8px rgba(0,0,0,.6));
+			@include background(#000);
+			display: block;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+	}
+
+	/* The shadow behind the image */
+	&.figure {
+		line-height: 0;
+
+		&:after {
+			@include box-shadow(0 0 8px rgba(0,0,0,.6));
+			@include background(#444);
+			bottom: 40px;
+			content: '';
+			display: block;
+			height: auto;
+			left: 0;
+			position: absolute;
+			top: 40px;
+			right: 0;
+			width: auto;
+			z-index: -1;
+		}
+
+		small {
+			color: #bdbdbd;
+			display: block;
+			font-size: 12px;
+			line-height: 14px;
+		}
+
+		figure {
+			margin: 0;
+		}
+
+		.mfp-gallery .mfp-image-holder & {
+			cursor: pointer;
+		}
+	}
+
+	&.bottom-bar {
+		cursor: auto;
+		left: 0;
+		margin-top: -36px;
+		position: absolute;
+		top: 100%;
+		width: 100%;
+	}
+
+	&.title {
+		color: #f3f3f3;
+		line-height: 18px;
+		padding-right: 36px;
+		text-align: left;
+		word-wrap: break-word;
+	}
+}
+button {
+
+	&.mfp-close,
+	&.mfp-arrow {
+		@include appearance(none);
+		@include box-shadow(none);
+		@include background(transparent);
+		border: 0;
+		cursor: pointer;
+		display: block;
+		outline: none;
+		overflow: visible;
+		padding: 0;
+		z-index: #{$top-z-index/10000 + 46};
+	}
+
+	::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+}
+/* Main image in popup */
+img.mfp-img {
+	@include box-sizing(border-box);
+	display: block;
+	height: auto;
+	line-height: 0;
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 40px 0 40px;
+	width: auto;
+}
+@media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
+	/**
+       * Remove all paddings around the image on small screen
+       */
+	.mfp-img-mobile {
+
+		.mfp-image-holder {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		img.mfp-img {
+			padding: 0;
+		}
+
+		.mfp-figure {
+
+			&:after {
+				bottom: 0;
+				top: 0;
+			}
+
+			small {
+				display: inline;
+				margin-left: 5px;
+			}
+		}
+
+		.mfp-bottom-bar {
+			@include box-sizing(border-box);
+			@include background(rgba(0,0,0,.6));
+			bottom: 0;
+			margin: 0;
+			padding: 3px 5px;
+			position: fixed;
+			top: auto;
+
+			&:empty {
+				padding: 0;
+			}
+		}
+
+		.mfp-counter {
+			right: 5px;
+			top: 3px;
+		}
+
+		.mfp-close {
+			$height: 35px;
+
+			@include background(rgba(0,0,0,.6));
+			height: $height;
+			line-height: $height;
+			padding: 0;
+			position: fixed;
+			right: 0;
+			text-align: center;
+			top: 0;
+			width: $height;
+		}
+	}
+}
+@media all and (max-width: 900px) {
+
+	.mfp {
+
+		&.arrow {
+			@include scale(.75);
+
+			&.left {
+				@include transform-origin(0 0);
+			}
+
+			&.right {
+				@include transform-origin(100% 100%);
+			}
+		}
+
+		&.container {
+			padding-left: 6px;
+			padding-right: 6px;
+		}
+	}
+}
+.mfp-ie7 {
+
+	.mfp-img {
+		padding: 0;
+	}
+
+	.mfp-bottom-bar {
+		$width: 600px;
+
+		left: 50%;
+		margin-left: -#{$width/2};
+		margin-top: 5px;
+		padding-bottom: 5px;
+		width: $width;
+	}
+
+	.mfp-container {
+		padding: 0;
+	}
+
+	.mfp-content {
+		padding-top: 44px;
+	}
+
+	.mfp-close {
+		padding-top: 0;
+		right: 0;
+		top: 0;
+	}
+}
+#htmlprint {
+	@include opaque;
+	@include background($white);
+	display: inline-block!important;
+	margin-left: 20%;
+	padding: 20px;
+	position: relative;
+	text-align: left;
+	width: auto;
+	width: 800px;
+}
+
+
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    margin: 0 auto 0 auto;
+    width: 780px;
+    background-repeat: repeat-x;
+    background-color: #fff;
+}
+
+#header {
+    width: 800px;
+    height: 53px;
+    background-image:url('../img/evictions_bg.gif');
+}
+
+#logo {
+    margin: 13px 0 0 23px;
+    float: left;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-size: 28px;
+    font-weight: normal;
+    margin: 8px 0 0 12px;
+    display: block;
+    float: left;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    color: #1a9000;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 20px 0 20px 10px;
+    margin: 0px !important;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+    width: 100%;
+    background-color: #e5f4f9;
+    padding: 10px 0 10px 10px;
+    margin: 0px !important;
+}
+
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    color: #363636;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 12px 0 0 0;
+    margin: 0px !important;
+}
+
+#content {
+    width: 780px;
+    padding: 0 15px 0 15px;
+}
+
+#info_wrapper {
+    width: 780px;
+    background-image:url('../img/Evictions_info_wrapper_bg.gif');
+}
+
+#info_col_1 {
+    width: 380px;
+    height: 150px;
+    float: left;
+    margin: 0 0 0 10px;
+}
+
+#info_col_2 {
+    width: 370px;
+    height: 150px;
+    float: left;
+    padding: 0 0 0 20px;
+}
+
+.details_col_1 {
+    width: 115px;
+    float: left;
+    display: block;
+    font-weight: bold;
+    padding: 0px;
+}
+
+.details_col_2 {
+    width: 200px;
+    float: left;
+    display: block;
+    padding: 0px
+}
+
+.details2_col_1 {
+    width: 165px;
+    float: left;
+    display: block;
+    font-weight: bold;
+    padding: 0px;
+    margin-left: 20px;
+}
+
+.details2_col_2 {
+    width: 180px;
+    float: left;
+    display: block;
+    padding: 0px
+}
+
+.li_style {
+    list-style: none;
+    margin: 0px;
+    padding:0px;
+}
+
+.li_style_short {
+    list-style: none;
+    margin: 0px;
+    padding:0px;
+    width: 155px;
+}
+
+#results {
+    width: 780px;
+}
+
+.entry {
+    width: 780px;
+    padding: 0 0 0 10px;
+    margin: 0px 0 0 0;
+    min-height: 285px;
+}
+.lightblue {
+    background-color: #f8fdfe;
+}
+
+.entry_col_1 {
+    width: 500px;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.entry_details_col_1 {
+    width: 115px;
+    float: left;
+    display: block;
+    font-weight: bold;
+    padding: 0px;
+}
+
+.entry_details_col_2 {
+    width: 300px;
+    float: left;
+    display: block;
+    padding: 0px
+}
+
+.data_set {
+    position: relative;
+    margin: -21px 0 0 550px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+}
+
+.column_small {
+    font-weight: bold;
+    width: 70px;
+}
+
+.column_large {
+    font-weight: bold;
+    width: 170px;
+}
+
+.column_entry1 {
+    font-weight: bold;
+    width: 110px;
+}
+.column_entry2 {
+    width: 194px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}

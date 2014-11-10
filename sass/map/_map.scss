@@ -1,0 +1,606 @@
+/* ==========================================================================
+	Map
+============================================================================= */
+
+.map-info {
+	//width: 30%; removed per Bryan's request
+	float: left;
+	margin: 0 0 30px 0;
+	height: 445px;
+		h1, h2, h3, h4, h5 {
+		font-weight: normal !important;
+	}
+	h3 {
+	width: 221px;
+	}
+}
+
+.map-details {
+	list-style: none;
+	margin: none !important; 
+	padding: 0px;
+	li {
+		margin: none !important;
+		line-height: auto;
+		padding: 0px;
+	}
+}
+.red_map_state { 
+	color: #cc4732 !important;
+	}
+
+#interactive_map {
+	h1, h2, h3, h4, h5 {
+		font-weight: normal !important;
+	}
+	min-height: 500px;
+	width: 700px;
+	position: absolute;
+	right: -61px;
+	top: 175px;
+    ul li {
+		color: #c3c3c3;
+	}
+	&:hover {
+		color: #9a9a9a;
+	}
+}
+
+#puerto_rico_svg {
+	position: absolute;
+	fill: #c3c3c3;
+	left: 170px;
+	top: 409px;
+}
+
+#virgin_islands {
+	position: absolute;
+	fill: #c3c3c3;
+	left: 266px;
+	top: 412px;
+}
+#report_results {
+	margin: 0 0 0 0;
+	text-align: right;
+}
+.small_state {
+	margin: 24px 0 50px -116px;
+	text-align: left;
+	position: absolute;
+	display: block;
+	z-index: 1;
+	fill: #cc4731;
+}
+
+.state_abbreviation {
+	position: absolute;
+	top: 75px;
+	left: 30px;
+	font-family: "Open Sans", HelveticaNeue, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+	font-size: 49px;
+	color: #fff;
+	z-index: 2;
+	h1 {
+		font-family: "Open Sans", HelveticaNeue, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+		color: #fff;
+		margin: 0px;
+		padding: 0px;
+		font-weight: bold;
+		font-size: 23px;
+		//-webkit-text-stroke: 2px #cc4731; removed because this does not work in IE and FF
+		text-shadow:
+		   -2px -2px 0 #cc4731,  
+			2px -2px 0 #cc4731,
+			-2px 2px 0 #cc4731,
+			 2px 2px 0 #cc4731;
+	}
+}
+
+.table_link {
+	color: #f07a00;
+	font-weight: bold;
+	margin-bottom: 32px;
+	line-height: 15px;
+	text-decoration: none;
+	border-bottom: 1px solid #f07a00;
+	&:hover{
+		color: #f07a00;
+		font-weight: bold;
+		margin-bottom: 32px;
+		text-decoration: none;
+		border-bottom: none;
+	}
+}
+.single_state {
+	margin:0px;
+}
+
+.usa_continent path {
+	fill: #c3c3c3;
+	stroke: #fff;
+	stroke-width: 1px;
+	}
+
+.placeholder-light {
+	   ::-webkit-input-placeholder {
+	   color: #c1c1c1 !important;
+	   }
+
+	:-moz-placeholder { /* Firefox 18- */
+	   color: #c1c1c1 !important;  
+	   }
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: #c1c1c1 !important;  
+	   }
+
+	:-ms-input-placeholder {  
+	   color: #c1c1c1 !important;  
+	   }
+	}
+
+
+/*Breakpoint for map these need to be moved to _responsive.scss once sompile error are sloved*/
+@media (max-width: 767px) {
+#interactive_map {
+		display:none;
+	}
+	#report_results {
+		position: absolute;
+		text-align: right;
+		width: 308px;
+		height: 68px;
+		top: 435px;
+		right: 32px;
+	}
+	.mobile-layout tbody > tr > td {
+		vertical-align: top;
+		padding: 20px 0 0px 125px;
+		line-height: 14px;
+		text-align: right;
+}
+	.table-striped>tbody>tr>td {
+		background-color: #fff !important;
+		padding-right: 20px;
+	}
+	.mobile-layout tbody > tr {
+		height: 179px;
+		background-color: #fff;
+	}
+	.state_hide {
+		display:none !important;
+		} 
+	.map-info {
+	height: auto;
+		}
+}
+
+@media (min-width: 768px) {
+.small_state, .state_abbreviation, .mobile_title {
+		display:none;
+	}
+}
+
+@media (max-width: 300px) {
+.small_state, .state_abbreviation {
+		display:none;
+	}
+}
+
+@media (max-width: 1135px) {
+#interactive_map {
+	min-height: 491px;
+	width: 700px;
+	position: relative;
+	right: inherit;
+	top: inherit;
+	margin: 0 0 0 0;
+	float: left;
+	}
+	.map-info {
+	height: 230px;
+	}
+}
+
+@media (max-width: 850px) {
+.modal-evictions {
+	width: 100% !important;
+	padding: 20px;
+	}
+	#header_evictions {
+	width: 100% !important;
+	}
+	#info_col_2_evictions {
+	width: 370px !important;
+	height: 225px !important;
+	float: none !important;
+	padding: 0 0 0 0 !important;
+	}
+	#results {
+	width: 390px !important;
+	overflow: hidden;
+	}
+	h3.evictions {
+	width: 300px !important;
+	background-color: #fff !important;
+	display: block !important;
+	}
+	.lightblue {
+	background-color: #fff !important;
+	}
+	.data_set {
+	 margin: 0px !important;
+	}
+}
+
+@media (max-width: 450px) {
+.modal-evictions {
+	width: 100% !important;
+	padding: 20px;
+	}
+	#header_evictions {
+	width: 100% !important;
+	}
+	#info_col_2_evictions {
+	width: 370px !important;
+	height: 225px !important;
+	float: none !important;
+	padding: 0 0 0 0 !important;
+	}
+	#results {
+	width: 300px !important;
+	overflow: hidden;
+	}
+	h3.evictions {
+	width: 300px !important;
+	background-color: #fff !important;
+	display: block !important;
+	}
+	.lightblue {
+	background-color: #fff !important;
+	}
+	.data_set {
+	 margin: 0px !important;
+	}
+	.modal-evictions.modal-body {
+	overflow: hidden;
+	}
+}
+
+@media (max-width: 370px) {
+	#info_col_2_evictions {
+	display:none !important;
+	}
+	h1.evictions {
+	font-size: 21px !important;
+	margin: 15px 0 0 12px !important;
+	}
+	#content_evictions {
+	padding: 0px !important;
+	}
+	.column_entry2 {
+	width: 115px !important;
+	}
+	h3.evictions {
+	width: 100px !important;
+	}
+	h4.evictions {
+	width: 224px !important;
+	}
+	.modal-body {
+	overflow: hidden !important;
+	}
+	#logo_evictions {
+	margin: 13px 0 0 8px !important;;
+	}
+}
+
+//print styling
+@media print {
+    .page-content {
+        display:none;
+    }
+	.footer-widget {
+        display:none !important;
+    }
+	#logo_evictions {
+        display:none !important;
+    }
+	.modal-evictions { 
+		display: block; 
+		page-break-before: always; 
+	}
+	.receipt-content {
+		display: block; 
+		page-break-before: 
+		always; padding:20px;
+	}
+	#header_right {
+        margin-right: 50px;
+    }
+	innerpart24, .innerpart23, .innerpart22, .innerpart21 {
+		width:115px !important;
+	}
+	.content_part1 {
+		 width: 480px !important;
+	 }
+	.btn { 
+		display: none; 
+		}
+	.print_title {
+		display: inline !important;
+		}
+	.receipt_logo {
+		display: none !important;
+	}
+}
+
+// import map styles
+@import "stately";
+
+.state_hide {display:none} 
+.state_al { margin: 0px 0px 0px 10px;}
+.state_ak { margin: 0px 0px 0px 16px;}
+.state_as {}
+.state_az { margin: 7px 0px 0px 16px;}
+.state_ar { margin: 7px 0px 0px 9px;}
+.state_ca {}
+.state_co { margin: 7px 0px 0px 13px;}
+.state_ct { margin: -6px 0px 0px 13px;}
+.state_de {}
+.state_dc {margin: 11px 0px 0px 12px;}
+.state_fm {}
+.state_fl {}
+.state_ga {}
+.state_gu {}
+.state_hi {}
+.state_id { margin: 9px 0px 0px 10px;}
+.state_il { margin: 0px 0px 0px 21px;}
+.state_in { margin: 0px 0px 0px 17px;}
+.state_ia { margin: 4px 0px 0px 13px;}
+.state_ks { margin: 2px 0px 0px 14px;}
+.state_ky { margin: 4px 0px 0px 36px;}
+.state_la { margin: 0px 0px 0px -8px;}
+.state_me { margin: 4px 0px 0px 9px;}
+.state_mh { margin: 0px 0px 0px -6px;}
+.state_md {}
+.state_ma {}
+.state_mi {}
+.state_mn { margin: 0px 0px 0px -6px;}
+.state_ms {}
+.state_mo {}
+.state_mt { margin: 4px 0px 0px 15px;}
+.state_ne { margin: 5px 0px 0px 15px;}
+.state_nv { margin: -11px 0px 0px 9px;}
+.state_nh { margin: 16px 0px 0px 4px;}
+.state_nj { margin: 0px 0px 0px 20px;}
+.state_nm { margin: 6px 0px 0px 10px;}
+.state_ny { margin: 7px 0px 0px 19px;}
+.state_nc { margin: 6px 0px 0px 24px;}
+.state_nd { margin: 6px 0px 0px 11px;}
+.state_mp {}
+.state_oh { margin: 9px 0px 0px 8px;}
+.state_ok { margin: 4px 0px 0px 27px;}
+.state_or { margin: 6px 0px 0px 10px;}
+.state_pw {}
+.state_pa { margin: 4px 0px 0px 14px;}
+.state_pr { margin: 6px 0px 0px 18px;}
+.state_ri { margin: 0px 0px 0px 14px;}
+.state_sc { margin: 0px 0px 0px 20px;}
+.state_sd { margin: 0px 0px 0px 13px;}
+.state_tn {}
+.state_tx { margin: 4px 0px 0px 19px;}
+.state_ut { margin: 11px 0px 0px 12px;}
+.state_vt { margin: 0px 0px -1px 14px;}
+.state_vi { margin: 0px 0px 0px 22px;}
+.state_va { margin: 8px 0px 0px 26px;}
+.state_wa { margin: 8px 0px 0px 18px;}
+.state_wv { margin: 11px 0px 0px 0px}
+.state_wi { margin: 7px 0px 0px 15px;}
+.state_wy { margin: 5px 0px 0px 12px;}
+
+/* report styles */
+.modal-evictions {
+	width:840px;
+}
+
+#header_evictions {
+    width: 800px;
+    height: 53px;
+	background-color: #1a9000;
+}
+
+#logo_evictions {
+    margin: 13px 0 0 23px;
+    float: left;
+}
+
+h1.evictions {
+    font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	font-size: 28px;
+	font-weight: normal;
+	margin: 8px 0 0 12px;
+	display: block;
+	float: left;
+}
+
+h2.evictions {
+    font-family: 'Open Sans', sans-serif;
+    color: #1a9000;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 20px 0 20px 10px;
+    margin: 0px !important;
+}
+
+h3.evictions {
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+    width: 100%;
+    background-color: #e5f4f9;
+    padding: 10px 0 10px 10px;
+    margin: 0px !important;
+}
+
+h4.evictions {
+    font-family: 'Open Sans', sans-serif;
+    color: #363636;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 12px 0 0 0;
+    margin: 0px !important;
+}
+
+#content_evictions {
+    width: 780px;
+    padding: 0 15px 0 15px;
+}
+
+#info_wrapper_evictions {
+    width: 780px;
+    background-image:url('../img/Evictions_info_wrapper_bg.gif');
+}
+
+#info_col_1_evictions {
+    width: 380px;
+    height: 150px;
+    float: left;
+    margin: 0 0 0 10px;
+}
+
+#info_col_2_evictions {
+    width: 370px;
+    height: 150px;
+    float: left;
+    padding: 0 0 0 20px;
+}
+
+.details_col_1 {
+    width: 115px;
+    float: left;
+    display: block;
+    font-weight: bold;
+    padding: 0px;
+}
+
+.details_col_2 {
+    width: 200px;
+    float: left;
+    display: block;
+    padding: 0px
+}
+
+.details2_col_1 {
+    width: 165px;
+    float: left;
+    display: block;
+    font-weight: bold;
+    padding: 0px;
+    margin-left: 20px;
+}
+
+.details2_col_2 {
+    width: 180px;
+    float: left;
+    display: block;
+    padding: 0px
+}
+
+.li_style {
+    list-style: none;
+    margin: 0px;
+    padding:0px;
+}
+
+.li_style_short {
+    list-style: none;
+    margin: 0px;
+    padding:0px;
+    width: 155px;
+}
+
+#results {
+    width: 780px;
+}
+
+.entry {
+    width: 780px;
+    padding: 0 0 0 10px;
+    margin: 0px 0 0 0;
+    min-height: 285px;
+}
+.lightblue {
+    background-color: #f8fdfe;
+}
+
+.entry_col_1 {
+    width: 500px;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.entry_details_col_1 {
+    width: 115px;
+    float: left;
+    display: block;
+    font-weight: bold;
+    padding: 0px;
+}
+
+.entry_details_col_2 {
+    width: 300px;
+    float: left;
+    display: block;
+    padding: 0px
+}
+
+.data_set {
+    position: relative;
+    margin: -21px 0 0 550px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+}
+
+.column_small {
+    font-weight: bold;
+    width: 70px;
+}
+
+.column_large {
+    font-weight: bold;
+    width: 170px;
+}
+
+.column_entry1 {
+    font-weight: bold;
+    width: 110px;
+}
+.column_entry2 {
+    width: 194px;
+}
+
+/*Chase iframe*/
+.iframe_payment {
+    border: none;
+	background-color: #fff;
+	width: 100%;
+	height: 1000px;
+	padding: 10px;
+}
+
+@media (max-width: 950px) {
+	.iframe_payment {
+    //margin: 120px 0 0 0px; this is no longer needed
+	}
+}
+
+@media (max-width: 362px) {
+	.iframe_payment {
+    //margin: 120px 0 0 0px;
+	width:320px !important;
+	}
+}

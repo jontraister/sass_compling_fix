@@ -1,0 +1,117 @@
+2014-08-11 14:51:47     error sass/styles.scss (Line 343 of sass/_general.scss: Undefined mixin 'user-select'.)
+2014-08-11 14:51:47 identical styles.css 
+2014-08-11 14:53:36     error sass/styles.scss (Line 507 of sass/_general.scss: Undefined mixin 'user-select'.)
+2014-08-11 14:53:36 overwrite styles.css 
+2014-08-11 14:54:13     error sass/styles.scss (Line 675 of sass/_general.scss: Undefined mixin 'user-select'.)
+2014-08-11 14:54:13 overwrite styles.css 
+2014-08-11 14:56:54     error sass/styles.scss (Line 1617 of sass/_general.scss: Invalid CSS after "  &": expected "{", was "icon1 {"
+
+"icon1" may only be used at the beginning of a compound selector.)
+2014-08-11 14:56:54 overwrite styles.css 
+2014-08-11 14:57:12     error sass/styles.scss (Line 343 of sass/_general.scss: Undefined mixin 'user-select'.)
+2014-08-11 14:57:12 overwrite styles.css 
+2014-08-11 14:57:46     error sass/styles.scss (Line 507 of sass/_general.scss: Undefined mixin 'user-select'.)
+2014-08-11 14:57:46 overwrite styles.css 
+2014-08-11 14:58:13     error sass/styles.scss (Line 675 of sass/_general.scss: Undefined mixin 'user-select'.)
+2014-08-11 14:58:13 overwrite styles.css 
+2014-08-11 14:58:39     error sass/styles.scss (Line 1324 of sass/_general.scss: Undefined mixin 'user-select'.)
+2014-08-11 14:58:39 overwrite styles.css 
+2014-08-11 14:59:36     error sass/styles.scss (Line 123 of sass/_main.scss: Undefined mixin 'user-select'.)
+2014-08-11 14:59:36 overwrite styles.css 
+2014-08-11 15:01:23     error sass/styles.scss (Line 149 of sass/_home.scss: Undefined mixin 'user-select'.)
+2014-08-11 15:01:23 overwrite styles.css 
+2014-08-11 15:03:20     error sass/styles.scss (Line 172 of sass/_home.scss: Undefined mixin 'animation'.)
+2014-08-11 15:03:20 overwrite styles.css 
+2014-08-11 15:04:02 overwrite styles.css 
+2014-08-11 15:05:38 overwrite styles.css 
+2014-08-11 15:10:48     error sass/styles.scss (Line 1617 of sass/_general.scss: Invalid CSS after "  &": expected "{", was "icon1 {"
+
+"icon1" may only be used at the beginning of a compound selector.)
+2014-08-11 15:10:48 overwrite styles.css 
+2014-08-11 15:10:49     error sass/styles.scss (Line 1617 of sass/_general.scss: Invalid CSS after "  &": expected "{", was "icon1 {"
+
+"icon1" may only be used at the beginning of a compound selector.)
+2014-08-11 15:10:49 overwrite styles.css 
+2014-08-11 15:10:51     error sass/styles.scss (Line 1617 of sass/_general.scss: Invalid CSS after "  &": expected "{", was "icon1 {"
+
+"icon1" may only be used at the beginning of a compound selector.)
+2014-08-11 15:10:51 identical styles.css 
+2014-08-11 15:10:52     error sass/styles.scss (Line 1617 of sass/_general.scss: Invalid CSS after "  &": expected "{", was "icon1 {"
+
+"icon1" may only be used at the beginning of a compound selector.)
+2014-08-11 15:10:52 identical styles.css 
+2014-08-11 15:10:54     error sass/styles.scss (Line 1617 of sass/_general.scss: Invalid CSS after "  &": expected "{", was "icon1 {"
+
+"icon1" may only be used at the beginning of a compound selector.)
+2014-08-11 15:10:54 identical styles.css 
+2014-08-11 15:10:55     error sass/styles.scss (Line 1617 of sass/_general.scss: Invalid CSS after "  &": expected "{", was "icon1 {"
+
+"icon1" may only be used at the beginning of a compound selector.)
+2014-08-11 15:10:55 identical styles.css 
+2014-08-11 15:10:56     error sass/styles.scss (Line 1617 of sass/_general.scss: Invalid CSS after "  &": expected "{", was "icon1 {"
+
+"icon1" may only be used at the beginning of a compound selector.)
+2014-08-11 15:10:56 identical styles.css 
+2014-08-11 15:10:58     error sass/styles.scss (Line 1617 of sass/_general.scss: Invalid CSS after "  &": expected "{", was "icon1 {"
+
+"icon1" may only be used at the beginning of a compound selector.)
+2014-08-11 15:10:58 identical styles.css 
+2014-08-11 15:10:59     error sass/styles.scss (Line 1617 of sass/_general.scss: Invalid CSS after "  &": expected "{", was "icon1 {"
+
+"icon1" may only be used at the beginning of a compound selector.)
+2014-08-11 15:10:59 identical styles.css 
+2014-08-11 15:23:04     error sass/styles.scss (Line 1617 of sass/_general.scss: Invalid CSS after "  &": expected "{", was "icon1 {"
+
+"icon1" may only be used at the beginning of a compound selector.)
+2014-08-11 15:23:04 overwrite styles.css 
+2014-08-11 15:23:06     error sass/styles.scss (Line 1617 of sass/_general.scss: Invalid CSS after "  &": expected "{", was "icon1 {"
+
+"icon1" may only be used at the beginning of a compound selector.)
+2014-08-11 15:23:06 overwrite styles.css 
+2014-08-11 15:23:07     error sass/styles.scss (Line 1617 of sass/_general.scss: Invalid CSS after "  &": expected "{", was "icon1 {"
+
+"icon1" may only be used at the beginning of a compound selector.)
+2014-08-11 15:23:07 identical styles.css 
+2014-08-11 15:23:09     error sass/styles.scss (Line 1617 of sass/_general.scss: Invalid CSS after "  &": expected "{", was "icon1 {"
+
+"icon1" may only be used at the beginning of a compound selector.)
+2014-08-11 15:23:09 identical styles.css 
+2014-08-11 15:23:10     error sass/styles.scss (Line 1617 of sass/_general.scss: Invalid CSS after "  &": expected "{", was "icon1 {"
+
+"icon1" may only be used at the beginning of a compound selector.)
+2014-08-11 15:23:10 identical styles.css 
+2014-08-11 15:23:12     error sass/styles.scss (Line 1617 of sass/_general.scss: Invalid CSS after "  &": expected "{", was "icon1 {"
+
+"icon1" may only be used at the beginning of a compound selector.)
+2014-08-11 15:23:12 identical styles.css 
+2014-08-11 15:23:13     error sass/styles.scss (Line 1617 of sass/_general.scss: Invalid CSS after "  &": expected "{", was "icon1 {"
+
+"icon1" may only be used at the beginning of a compound selector.)
+2014-08-11 15:23:13 identical styles.css 
+2014-08-11 15:23:14     error sass/styles.scss (Line 1617 of sass/_general.scss: Invalid CSS after "  &": expected "{", was "icon1 {"
+
+"icon1" may only be used at the beginning of a compound selector.)
+2014-08-11 15:23:14 identical styles.css 
+2014-10-25 15:50:41    create stylesheets/bootstrap-multiselect.css 
+2014-10-25 15:50:42    create stylesheets/chase-payment.css 
+2014-10-25 15:50:44    create stylesheets/datepicker.css 
+2014-10-25 15:50:44     error sass/featherlight.scss (Line 10: Invalid CSS after "	&": expected "{", was "-bg {"
+
+"-bg" may only be used at the beginning of a compound selector.)
+2014-10-25 15:50:44    create stylesheets/featherlight.css 
+2014-10-25 15:50:49    create stylesheets/style.css 
+2014-10-25 15:50:50     error sass/jquery-sidr/jquery.sidr.dark.scss (Line 2: File to import not found or unreadable: compass/css3/flexbox.
+Load paths:
+  C:/Users/jtraist/Documents/Jon's Docs/SmartMove/_STAGING/CMS00/cache/default/main/SmartMove/WORKAREA/SmartMove/sites/SmartMove/css/sass
+  C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_extensions/compass-960-plugin-0.10.4/stylesheets
+  C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_extensions/compass-h5bp-0.1.1/stylesheets
+  C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_extensions/compass-normalize-1.4.3/stylesheets
+  C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_extensions/bootstrap-sass-2.3.2.1/vendor/assets/stylesheets
+  C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_extensions/susy-1.0.9/sass
+  C:/Users/jtraist/Desktop/compass.app/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss
+  Compass::SpriteImporter
+  C:/Users/jtraist/Desktop/vendor/assets/stylesheets)
+2014-10-25 15:50:50    create stylesheets/jquery-sidr/jquery.sidr.dark.css 
+2014-10-25 15:50:50    create stylesheets/jquery-sidr/jquery.sidr.light.css 

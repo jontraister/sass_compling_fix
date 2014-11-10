@@ -1,0 +1,87 @@
+// support
+$legacy-support-for-ie          : false;
+$legacy-support-for-ie8         : true;
+$experimental-support-for-opera : true;
+$experimental-support-for-pie   : true;
+
+// base
+$base-background                : #e9ebec;
+$base-color                     : #2d2d2d;
+$base-color-light               : #767373;
+$base-font-family               : 'Open Sans', HelveticaNeue, 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
+
+// body
+$body-background                : $base-background;
+$body-color                     : $base-color;
+$body-font-family               : $base-font-family;
+$body-font-size                 : 13px;
+$body-font-weight               : 400;
+//$body-line-height             : 1.5;
+$body-line-height               : 20px;
+
+// stacking
+$top-z-index                    : 10000000;
+
+// colors - grays
+$black                          : #000;
+$darker                         : lighten(#000, 13.5%); // #222222
+$dark                           : lighten(#000, 20%);   // #333333
+$gray                           : lighten(#000, 33.5%); // #555555
+$light                          : lighten(#000, 58.5%); // #959595
+$lighter                        : lighten(#000, 93.5%); // #eeeeee
+$lightest                       : lighten(#000, 96.5%); // #f6f6f6
+$white                          : #fff;
+$purple                         : #564d6c;
+
+// colors - brand
+$brand-primary                  : #178b9c;
+$brand-info                     : #43aab9;
+$brand-info-bright              : #196097;
+$brand-warning                  : #ee7a19;
+$brand-success                  : #209c17;
+$brand-success-bright           : #00cd0c;
+$brand-neutral                  : #efd026;
+$brand-danger                   : #db1111;
+
+$brand-primary-light            : #f6efd5;
+$brand-info-light               : #eaf6fa;
+$brand-warning-light            : #fefddf;
+$brand-success-light            : #edfcd5;
+$brand-danger-light             : #fddfdf;
+
+$brand-primary-hover            : #178b9c - #111;
+$brand-info-hover               : #43aab9 - #111;
+$brand-warning-hover            : #ee7a19 - #111;
+$brand-success-hover            : #209c17 - #111;
+$brand-neutral-hover            : #efd026 - #111;
+$brand-danger-hover             : #db1111 - #111;
+
+// links
+$link-color                     : #0d86be;
+$link-color-hover               : #2a6496;
+
+// misc colors
+$alternating                    : #f9fdfe;
+
+// header
+$header-height                  : 80px;
+
+// sidebar & navigation
+$sidebar-background             : #232323;
+$left-sidebar-width             : 250px;
+
+$nav-primary-background         : #353535;
+$nav-primary-background-active  : #2e2d2d;
+$nav-primary-background-hover   : #2e2c2d;
+$nav-primary-dividers           : $sidebar-background;
+$nav-primary-icon-color         : #817f80;
+
+$nav-secondary-background       : $sidebar-background;
+$nav-secondary-background-active: #141613;
+$nav-secondary-background-hover : #4b4b4b;
+$nav-secondary-dividers         : $base-color;
+$nav-secondary-icon-color       : $nav-primary-icon-color;
+
+// sprites
+//$sprites                        : sprite-map("icons/*.png");
+//$sprites2x                      : sprite-map("icons-2x/*.png");

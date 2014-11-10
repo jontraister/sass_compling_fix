@@ -1,0 +1,232 @@
+/* ==========================================================================
+	Applications
+	============================================================================= */
+
+.application-item {
+	border-top: 6px solid $brand-primary;
+	padding: 0 0 5px;
+
+	.application-header {
+		$dim: 1.5em;
+
+		background-color: $brand-primary;
+		padding: 18px;
+
+		&,
+		h4,
+		.icon-stack-2x {
+			color: $white;
+		}
+
+		h4 {
+			font-size: 15px;
+			font-weight: 500;
+			margin: 0 0 25px;
+
+			span {
+				display: block;
+				margin-top: 5px;
+				font-size: 18px;
+				font-weight: 600;
+			}
+
+			&.lg {
+				font-size: 22px;
+			}
+		}
+
+		.icon-stack {
+			line-height: $dim;
+			height: $dim;
+			width: $dim;
+		}
+
+		.icon-stack-1x {
+			color: $brand-primary;
+		}
+
+		.icon-stack-2x {
+			font-size: $dim;
+		}
+
+		> .icon-map-marker {
+			@include border-radius(50%);
+			@include inline-block(top);
+			@include background($white);
+			font-size: 1.15em;
+			height: $dim;
+			line-height: $dim;
+			text-align: center;
+			width: $dim;
+
+			&:before {
+				color: $brand-primary;
+				font-size: .95em;
+			}
+		}
+	}
+
+	&.property {
+		$tmp_color: #564d6c;
+
+		border-top: 6px solid $tmp_color;
+
+		.application-header {
+			background-color: $tmp_color;
+
+			h4 {
+				margin-bottom: 15px;
+			}
+
+			.icon-stack-1x {
+				color: $tmp_color;
+			}
+
+			> .icon-map-marker {
+
+				&:before {
+					color: $tmp_color;
+				}
+			}
+		}
+
+		.application-summary {
+
+			h4 {
+				margin-top: 18px;
+			}
+
+			.table {
+
+				> .light-head {
+					background-color: #f8f5fe;
+				}
+			}
+
+			.table-striped tbody > tr:nth-child(2n+1) > td,
+			.table-striped tbody > tr:nth-child(2n+1) > th,
+			.table-striped-skip tbody > tr:nth-child(3n+3) > td {
+				background-color: #fcfbff;
+				width: 33%;
+				padding: 0px !important;
+			}
+		}
+
+		.application-detail,
+		.editor {
+			font-size: 11px;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+
+		.application-detail {
+			margin-top: 12px;
+
+			a {
+				text-decoration: none;
+			}
+
+			i {
+				margin-right: 4px;
+			}
+		}
+
+		.application-summary {
+
+			h4 {
+				margin-top: 18px;
+			}
+		}
+
+		.application-time,
+		.info {
+			font-size: 12px;
+		}
+
+		.application-time {
+			//background-color: #eaf6fa;
+			//margin: 0;
+			//padding: 10px 0;
+		}
+
+		.info {
+			margin: 83px 0 0;
+			text-align: right;
+		}
+
+		.action {
+			margin-top: 18px;
+		}
+
+		.editor {
+			float: right;
+			margin-bottom: 19px;
+			//margin-top: 40px;
+			margin-top: 22px;
+			text-decoration: none;
+
+			&.icon {
+
+				&:before {
+					font-size: 14px;
+					font-weight: 400;
+					margin-right: .5ex;
+				}
+			}
+
+			i {
+				margin-right: .5ex;
+			}
+		}
+	}
+
+	&.closed {
+		border-top: 6px solid $light !important;
+
+		.application-header {
+			background-color: $light;
+
+			> .icon-map-marker {
+
+				&:before {
+					color: $light;
+				}
+			}
+		}
+	}
+
+	.added-on {
+		display: block;
+		float: right;
+		margin-left: 10px;
+
+		time {
+			@include inline-block(baseline);
+		}
+	}
+}
+
+.properties {
+
+	&.tab-content {
+
+		> .tab-pane,
+		> .active {
+			padding: 0;
+		}
+	}
+}
+
+.application-time {
+	background-color: #eaf6fa;
+	margin: 0;
+	padding: 10px 0;
+}
+
+.application-item .btn {
+	//float:right;
+}
+
+.btn-float-left {
+	//float:left !important;
+}

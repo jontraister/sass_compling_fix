@@ -1,0 +1,414 @@
+/* ==========================================================================
+	Buttons
+============================================================================= */
+
+.btn,
+.btn-white {
+	color: #5e5e5e;
+}
+
+.btn {
+	@include user-select(none);
+	@include inline-block;
+	@include border-radius(3px);
+	@include box-shadow(none);
+	@include text-shadow(none);
+	@include transition(all .12s linear);
+
+	background-color: #d1dade;
+	@include background-image(none);
+	border: none;
+	cursor: pointer;
+	font: 14px/#{$body-line-height} #{$base-font-family};
+	text-align: center;
+	text-decoration: none;
+
+	&.icon {
+
+		&:before {
+			@include font-awesome-icon;
+			margin-right: .5ex;
+		}
+	}
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	&.disabled,
+	&[disabled] {
+		background-color: #c1cace;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	.caret {
+		margin-left: 3px;
+	}
+}
+
+.btn-primary,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger,
+.btn-danger-dark,
+.btn-dark {
+	color: $white;
+}
+
+.btn-primary {
+	background-color: $brand-primary;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	&.disabled,
+	&[disabled] {
+		background-color: $brand-primary - $dark;
+	}
+}
+
+.btn-success {
+	background-color: $brand-success;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	&.disabled,
+	&[disabled] {
+		background-color: $brand-success - $dark;
+	}
+}
+
+.btn-info {
+	background-color: $brand-info;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	&.disabled,
+	&[disabled] {
+		background-color: $brand-info - $dark;
+	}
+}
+
+.btn-warning {
+	background-color: $brand-warning;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	&.disabled,
+	&[disabled] {
+		background-color: $brand-warning - $dark;
+	}
+}
+
+.btn-danger {
+	background-color: $brand-danger;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	&.disabled,
+	&[disabled] {
+		background-color: $brand-danger - $dark;
+	}
+}
+
+.btn-danger-dark {
+	background-color: $brand-primary - $light;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	&.disabled,
+	&[disabled] {
+		background-color: $brand-primary - $dark;
+	}
+}
+
+.btn-dark {
+	background-color: $dark;
+}
+
+.btn-white {
+	background-color: $white;
+	border: 1px solid #e5e9ec;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	&.disabled,
+	&[disabled] {
+		background-color: #fbfcfd;
+		border: 1px solid #b4b9be;
+	}
+}
+
+.btn-link {
+	background-color: transparent;
+	border: none;
+	color: $link-color;
+	text-decoration: underline;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	&.disabled,
+	&[disabled] {
+		background-color: transparent
+	}
+
+	i {
+		margin-right: 5px;
+	}
+}
+
+.btn-large {
+	@include border-radius(4px);
+	font-size: 16px;
+	padding: 11px 19px;
+
+	[class^="icon-"],
+	[class*=" icon-"] {
+		margin-top: 4px;
+	}
+}
+
+.btn-small {
+	@include border-radius(3px);
+	font-size: 11.9px;
+	padding: 3px 12px;
+
+	[class^="icon-"],
+	[class*=" icon-"] {
+		margin-top: 0;
+	}
+}
+
+.btn-mini {
+	@include border-radius(3px);
+	font-size: 10.5px;
+	padding: 2px 9px;
+
+	[class^="icon-"],
+	[class*=" icon-"] {
+		margin-top: -1px;
+	}
+}
+
+.btn-group {
+
+	> .btn {
+
+		+ .dropdown-toggle {
+			@include box-shadow(none);
+			border-left: 1px solid #f7f7f7;
+			border-left: 1px solid #e5e9ec;
+			padding-right: 14px;
+		}
+
+		&.btn-mini {
+
+			+ .dropdown-toggle {
+				padding-right: 8px;
+			}
+		}
+
+		&:hover,
+		&:focus,
+		&:active,
+		&.active {
+			z-index: 0;
+		}
+
+		&.btn-white {
+
+			&:hover,
+			&:focus,
+			&:active,
+			&.active {
+				border: 1px solid #e5e9ec;
+			}
+		}
+	}
+
+	> .dropdown-menu {
+		font-size: $body-font-size;
+
+		li {
+			margin-bottom: 5px;
+			padding-left: 0;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			a {
+				text-decoration: none;
+
+				i {
+					margin-right: 4px;
+				}
+			}
+
+			.success {
+				@include background($brand-success-light);
+
+				i {
+					color: $brand-success;
+				}
+			}
+
+			.warning {
+				@include background($brand-warning-light);
+
+				i {
+					color: $brand-warning;
+				}
+			}
+
+			.danger {
+				@include background($brand-danger-light);
+
+				i {
+					color: $brand-danger;
+				}
+			}
+		}
+	}
+
+	&.open {
+
+		.btn {
+
+			&.dropdown-toggle {
+				background-color: #e6e6e6;
+			}
+		}
+
+		.btn-primary {
+
+			&.dropdown-toggle {
+				background-color: $brand-primary - $darker;
+			}
+		}
+
+		.btn-warning {
+
+			&.dropdown-toggle {
+				background-color: $brand-warning - $darker;
+			}
+		}
+
+		.btn-danger {
+
+			&.dropdown-toggle {
+				background-color: $brand-danger - $darker;
+			}
+		}
+
+		.btn-success {
+
+			&.dropdown-toggle {
+				background-color: $brand-success - $darker;
+			}
+		}
+
+		.btn-info {
+
+			&.dropdown-toggle {
+				background-color: $brand-info - $darker;
+			}
+		}
+
+		.btn-inverse {
+
+			&.dropdown-toggle {
+				background-color: #222;
+			}
+		}
+
+		.btn-white {
+
+			&.dropdown-toggle {
+				background-color: #fbfcfd;
+			}
+		}
+	}
+}
+
+.btn-cons {
+	margin-bottom: 8px;
+	margin-right: 5px;
+	min-width: 120px;
+}
+
+.btn-edit {
+	margin-bottom: 15px;
+}
+
+.btn-block {
+
+	+ .btn-block {
+		margin-top: 8px;
+	}
+}
+
+.btn-multiselect {
+	font-size: $body-font-size;
+	height: 37px;
+}
+
+/* EDITED STYLES*/
+.btn-spacing {
+	margin: 13px 0 0;
+}
+
+.info {
+	margin-top: 92px;
+	text-align: right;
+}
+
+.application-item,
+.application-detail {
+	//font-size: 11px;
+	font-weight: 600;
+	margin-top: 12px;
+
+	.btn {
+		text-transform: none;
+	}
+
+	a {
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+}
+
+.alert-info {
+
+	.close {
+		font-size: 16px;
+		margin: 1px 0 0;
+	}
+}
+
+/*Date Picker updates*/
+.datepicker {
+	height: 270px;
+	padding: 15px;
+	width: 230px !important;
+}

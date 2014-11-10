@@ -1,0 +1,155 @@
+/* ==========================================================================
+	Icons
+============================================================================= */
+
+.fa.primary {
+	color: $brand-primary;
+}
+
+.icon-sets {
+
+	a {
+		text-decoration: none;
+
+		i {}
+
+		.fa-stack-1x {
+			font-size: 18px;
+		}
+
+		.fa-stack-2x {
+			color: #757a7e;
+
+			&.darkest {
+				color: #4b4b4b;
+			}
+
+			&.darker {
+				color: #6c6b6b;
+			}
+
+			&.dark {
+				color: #7b7b7b;
+			}
+		}
+
+		&,
+		.fa-title {
+			display: block;
+		}
+
+        float: left;
+        margin-right: 5px;
+        text-align: center;
+
+        .fa-title {
+            color: #757a7e;
+            font-size: 10px;
+            text-transform: uppercase;
+			//ADDED STYLE
+			margin-top: 5px;
+        }
+
+        &:first-child {
+            margin-right: 10px;
+        }
+	}
+}
+
+$dim: 2.5em;
+
+.fa-stack {
+	height: $dim;
+    line-height: $dim;
+    width: $dim;
+}
+
+.fa-stack-2x {
+    font-size: $dim;
+}
+
+
+@font-face {
+	font-family: 'smartmove';
+	src: url('../fonts/smartmove_1c859f1fda13156703b3762a30596d2b.eot');
+	src: url('../fonts/smartmove_1c859f1fda13156703b3762a30596d2b.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/smartmove_1c859f1fda13156703b3762a30596d2b.woff') format('woff'),
+		 url('../fonts/smartmove_1c859f1fda13156703b3762a30596d2b.ttf') format('truetype'),
+		 url('../fonts/smartmove_1c859f1fda13156703b3762a30596d2b.svg#smartmove') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+@font-face {
+        font-family: "smartmove";
+        src: url('../fonts/smartmove_1c859f1fda13156703b3762a30596d2b.svg#smartmove') format('svg');
+    }
+}
+
+[data-icon],
+.fa-handcuff_icon,
+.fa-house_icon {
+
+	&:before {
+		@include inline-block;
+		font-family: "smartmove";
+		font-style: normal;
+		font-weight: $body-font-weight;
+		font-variant: normal;
+		line-height: 1;
+		text-decoration: inherit;
+		text-rendering: optimizeLegibility;
+		text-transform: none;
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		font-smoothing: antialiased;
+	}
+}
+
+[data-icon]:before { content: attr(data-icon); }
+.fa-handcuff:before { content: '\f100'; }
+.fa-house_icon:before { content: '\f101'; }
+
+
+/* ADDED STATIC ICON STYLES*/
+.icon-blue {
+	color: $brand-primary;
+}
+.icon-space {
+	margin: 3px 0 0 6px;
+}
+.icon-credit-card {
+	color: $white;
+	top: 3px;
+	font-size:18px;
+}
+.icon-handcuff_icon {
+	color: $white;
+	top: 3px;
+	font-size:18px;
+	left: 1px;
+	font-family: "smartmove";
+	&:before {
+	content: '\f100';
+	}
+}
+.icon-house_icon {
+	color: $white;
+	top: 3px;
+	font-size:18px;
+	left: 1px;
+	font-family: "smartmove";
+	&:before {
+	content: '\f101';
+	}
+}
+.icon-grey {
+	color: $light !important;
+}
+.icon-purple {
+	color: $purple;
+}
+.icon-grey {
+	color: #959595;
+}
+

@@ -1,0 +1,229 @@
+/* ==========================================================================
+	Base
+============================================================================= */
+
+html,
+body {
+    height: 100%;
+    min-height: 100%;
+}
+html {
+    font-size: $body-font-size;
+}
+body {
+    background: $body-background;
+    color: $body-color;
+    font: normal $body-font-weight 100%/#{$body-line-height} $base-font-family;
+    margin: 0;
+    padding: 0;
+
+    /*  Added for CMS — K Huehn  */
+    > div,
+    #element1 {
+        @include box-sizing(border-box);
+        height: 100%;
+        width: 100%;
+    }
+
+    .iw_component {
+        display: inline;
+        overflow: visible;
+        position: static;
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+    //font-family: $body-font-family;
+    font-weight: 300;
+    color: #505458;
+}
+h3, h4, h5 {
+
+    small {
+        font-weight: 300;
+        color: #444;
+    }
+}
+a {
+    color: $link-color;
+    @include transition(color .1s linear 0, background-color .1s linear 0);
+
+    &:hover {
+        color: $link-color-hover;
+    }
+
+    &,
+    &:focus,
+    &:hover,
+    &:active {
+        outline: 0;
+        text-decoration: underline;
+    }
+}
+p {
+    color: #63696d;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+i {
+    font-size: 14px;
+}
+ul {
+
+    > li {
+        padding-left: 6px;
+        line-height: 20px;
+    }
+}
+blockquote {
+    padding: 0 0 0 18px;
+    border-left: 5px solid #eee;
+
+    p {
+        font-size: 16px;
+    }
+
+    small {
+        color: #8b91a0;
+        line-height: 29px;
+
+        &:before {
+            content: "";
+        }
+    }
+}
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #e0dfdf;
+    border-bottom: 1px solid #fefefe;
+}
+form {
+    margin: 0;
+}
+label,
+input,
+button,
+select,
+textarea {
+    font-size: $body-font-size;
+    font-weight: $body-font-weight;
+    line-height: 20px;
+}
+input,
+button,
+select,
+textarea {
+    font-family: HelveticaNeue, 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
+}
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+    @include appearance(none);
+    @include border-radius(0);
+    @include border-radius(2px);
+    @include box-shadow(none);
+    @include transition(background .2s linear 0, box-shadow .2s linear 0);
+    color: #282323;
+    outline: 0 none;
+    height: 16px;
+    padding: 6px 11px;
+    line-height: 15px;
+    font-size: $body-font-size;
+    font-weight: $body-font-weight;
+    vertical-align: top;
+    background-color: $white;
+    min-height: 37px;
+    border: 1px solid #e5e9ec;
+}
+input {
+    border: 1px solid #cecece;
+}
+textarea {
+    height: auto;
+    padding-left: 12px;
+    padding-top: 10px;
+}
+textarea:focus,
+select:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus {
+    @include box-shadow(none);
+
+    border-color: #e5e9ec;
+    background-color: #f4f5f7;
+    outline: 0;
+}
+input[type="radio"],
+input[type="checkbox"] {
+    @include box-sizing(border-box);
+    line-height: normal;
+    cursor: pointer;
+}
+select,
+input[type="file"] {
+    border: 0;
+    line-height: 8px;
+}
+select {
+    width: 220px;
+    background-color: $white;
+    background-image: none;
+    border: 1px solid #e5e5e5;
+    outline: none;
+    height: 37px !important;
+    min-height: 37px;
+}
+select[multiple],
+select[size] {
+    height: auto;
+}
+select:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+    @include box-shadow(none);
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+input[class*="span"],
+select[class*="span"],
+textarea[class*="span"] {
+    float: none;
+    margin-left: 0;
+}
+input[class*="span"] {
+    height: 34px;
+}
+label {
+
+    span {
+        color: $brand-warning;
+    }
+}

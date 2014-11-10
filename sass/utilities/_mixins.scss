@@ -1,0 +1,365 @@
+// Webkit-style focus
+@mixin tab-focus() {
+	// Default
+	outline: thin dotted #333;
+	// Webkit
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+// Center-align a block level element
+@mixin center-block() {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Sizing shortcuts
+@mixin size($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+
+// Placeholder text
+@mixin placeholder($color: $input-color-placeholder) {
+	&:-moz-placeholder            { color: $color; } // Firefox 4-18
+	&::-moz-placeholder           { color: $color; opacity: 1; } // Firefox 19+
+	&:-ms-input-placeholder       { color: $color; } // Internet Explorer 10+
+	&::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
+	&.placeholder       					{ color: $color; } // Fallback
+}
+
+// Placeholder text
+@mixin selected($color, $background) {
+	&::selection {
+		@include background($background); /* Safari */
+		color: $color;
+	}
+	&::-moz-selection {
+		@include background($background); /* Safari */
+		color: $color;
+	}
+}
+
+@mixin placeholder-height($height) {
+	&:-moz-placeholder,
+	&::-webkit-input-placeholder,
+	&.placeholder {
+		line-height: $height;
+	}
+}
+
+// Text overflow
+// Requires inline-block or block for proper styling
+@mixin text-overflow() {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+// CSS image replacement
+@mixin text-hide() {
+	// font: ~"0/0" a;
+	@include text-shadow(none);
+	background-color: transparent;
+	border: 0;
+	color: transparent;
+}
+
+// CSS3 PROPERTIES
+// --------------------------------------------------
+
+@mixin mask($arguments) {
+	@include experimental(mask, $properties, not -moz, -webkit, not -o, not -ms, not -khtml, official);
+	//-webkit-mask: $arguments;
+	//mask: $arguments;
+}
+
+// Single side border-radius
+@mixin border-top-radius($radius) {
+	border-top-right-radius: $radius;
+	border-top-left-radius: $radius;
+}
+@mixin border-right-radius($radius) {
+	border-bottom-right-radius: $radius;
+	border-top-right-radius: $radius;
+}
+@mixin border-bottom-radius($radius) {
+	border-bottom-right-radius: $radius;
+	border-bottom-left-radius: $radius;
+}
+@mixin border-left-radius($radius) {
+	border-bottom-left-radius: $radius;
+	border-top-left-radius: $radius;
+}
+
+// Drop shadows
+//@mixin box-shadow($shadow) {
+	//-webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
+	//box-shadow: $shadow;
+//}
+
+@mixin animation($properties) {
+	@include experimental(animation, $properties, -moz, -webkit, -o, -ms, not -khtml, official);
+}
+
+// Backface visibility
+// Prevent browsers from flickering when using CSS 3D transforms.
+// Default value is `visible`, but can be changed to `hidden`
+// See git pull https://github.com/dannykeane/bootstrap.git backface-visibility for examples
+@mixin backface-visibility($visibility) {
+	@include experimental(backface-visibility, $visibility, -moz, -webkit, not -o, not -ms, not -khtml, official);
+}
+
+// Background clip
+@mixin background-clip($clip: border-box) {
+	@include experimental(background-clip, $clip, -moz, -webkit, not -o, not -ms, not -khtml, official);
+}
+
+// Box sizing
+//@mixin box-sizing($boxmodel) {
+	//-webkit-box-sizing: $boxmodel;
+	//-moz-box-sizing: $boxmodel;
+	//box-sizing: $boxmodel;
+//}
+
+// User select
+// For selecting text on the page
+@mixin user-select($select) {
+	select : unquote($select);
+	@include experimental(user-select, $select, -moz, -webkit, -o, -ms, not -khtml, official);
+}
+
+// Resize anything
+@mixin resizable($direction) {
+	resize: $direction; // Options: horizontal, vertical, both
+	overflow: auto; // Safari fix
+}
+
+// CSS3 Content Columns
+@mixin content-columns($column-count, $column-gap: $grid-gutter-width) {
+	@include experimental(column-count, $column-count, -moz, -webkit, not -o, not -ms, not -khtml, official);
+	@include experimental(column-gap, $column-gap, -moz, -webkit, not -o, not -ms, not -khtml, official);
+}
+
+// Opacity
+@mixin opacity($opacity) {
+	@if $legacy-support-for-ie6 or $legacy-support-for-ie7 or $legacy-support-for-ie8 {
+		filter: unquote("alpha(opacity=#{round($opacity * 100)})");
+	}
+	opacity: $opacity;
+}
+
+
+// Tap Highlight Color
+@mixin tap-highlight-color() {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
+	outline: 0;
+}
+
+
+// Inline block
+@mixin inline-block($alignment: $inline-block-alignment) {
+	display: inline-block;
+	@if $alignment and $alignment != none {
+		vertical-align: $alignment;
+	}
+}
+
+
+// FontAwesome icon
+@mixin font-awesome-icon {
+	font: {
+		family: FontAwesome;
+		style: normal;
+		size: 14px;
+	}
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// Breakpoints
+@mixin breakpoint($point) {
+	@if $point == desktop {
+		@media (min-width: 980px) { @content; }
+	}
+	@else if $point == tablet {
+		@media (max-width: 979px) { @content; }
+	}
+	@else if $point == mobile {
+		@media (max-width: 480px) { @content; }
+	}
+	@else if $point == 992 or $point == wide {
+		@media (min-width: 992px) { @content; }
+	}
+	@else if $point == narrow {
+		@media (max-width: 768px) { @content; }
+	}
+	@else if $point == 767 {
+		@media (max-width: 767px) { @content; }
+	}
+	@else if $point == medium {
+		@media (max-width: 991px) { @content; }
+	}
+	@else if $point == retina1.5 {
+		@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5) { @content; }
+	}
+	@else {
+		@media (max-width: #{$point}px) { @content; }
+	}
+}
+
+// Flex mixins
+@mixin flexbox($display: flex) {
+	$display: unquote($display);
+	$box: box;
+	$flexbox: flexbox;
+	@if $display == inline-flex {
+		$box: inline-box;
+		$flexbox: inline-flexbox;
+	}
+
+	@include experimental-value(display, $box, not -moz, -webkit, not -o, not -ms, not -khtml, official);
+	@include experimental-value(display, $flexbox, not -moz, not -webkit, not -o, -ms, not -khtml, not official);
+	@include experimental-value(display, $display, -moz, -webkit, not -o, not -ms, not -khtml, official);
+}
+@mixin flex-direction($direction: row) {
+	$direction: unquote($direction);
+	$dir: normal;
+	$orient: horizontal;
+	@if $direction == column {
+		$orient: vertical;
+	}
+	@else if $direction == row-reverse {
+		$dir: reverse;
+	}
+	@else if $direction == column-reverse {
+		$dir: reverse;
+		$orient: vertical;
+	}
+	@include experimental(box-orient, $orient, -moz, -webkit, not -o, not -ms, not -khtml, official);
+	@include experimental(box-direction, $dir, -moz, -webkit, not -o, not -ms, not -khtml, official);
+	@include experimental(flex-direction, $direction, -moz, -webkit, not -o, -ms, not -khtml, official);
+}
+@mixin flex-wrap($wrap: wrap) {
+	$wrap: unquote($wrap);
+	$boxLines: $wrap;
+	$flexWrap: $wrap;
+	@if $wrap == nowrap {
+		$boxLines: single;
+		$flexWrap: none;
+	}
+
+	@include experimental(box-lines, $boxLines, -moz, -webkit, not -o, not -ms, not -khtml, official);
+	@include experimental(flex-wrap, $flexWrap, not -moz, not -webkit, not -o, -ms, not -khtml, not official);
+	@include experimental(flex-wrap, $wrap, not -moz, -webkit, not -o, not -ms, not -khtml, official);
+}
+@mixin flex-flow($values: (row nowrap)) {
+	.flexboxlegacy &,
+	.flexbox & {
+		@include experimental(flex-flow, $values, -moz, -webkit, not -o, -ms, not-khtml, official);
+	}
+}
+@mixin order($int: 0) {
+	.flexboxlegacy & {
+		@include experimental(box-ordinal-group, $int + 1, -moz, -webkit, not -o, not -ms, not -khtml, official);
+	}
+	.flexboxlegacy &,
+	.flexbox & {
+		@include experimental(order, $int, not -moz, not -webkit, not -o, -ms, not -khtml, not official);
+	}
+	.flexbox & {
+		@include experimental(order, $int, -moz, -webkit, not -o, not -ms, not -khtml, official);
+	}
+}
+@mixin flex-grow($int: 0) {
+
+	@include experimental(box-flex, $int, -moz, -webkit, not -o, not -ms, not -khtml, official);
+	@include experimental(flex-positive, $int, not -moz, not -webkit, not -o, -ms, not -khtml, not official);
+	@include experimental(flex-grow, $int, -moz, -webkit, not -o, -ms, not -khtml, official);
+}
+@mixin flex($fg: 1, $fs: null, $fb: null) {
+	$fg-boxflex: $fg;
+	@if type-of($fg) == list {
+		$fg-boxflex: nth($fg, 1);
+	}
+
+	.flexboxlegacy &,
+	.flexbox & {
+		@include experimental(box-flex, $fg-boxflex, -moz, -webkit, not -o, not -ms, not -khtml, official);
+		@include experimental(flex, $fg $fs $fb, not -moz, not -webkit, not -o, -ms, not -khtml, not official);
+		@include experimental(flex, $fg $fs $fb, -moz, -webkit, not -o, not -ms, not -khtml, official);
+	}
+}
+@mixin flex-justify-content($packContent: flex-start) {
+	$packContent: unquote($packContent);
+	$boxPack: $packContent;
+	$flexPack: $packContent;
+
+	@if $packContent == flex-start {
+		$boxPack: start;
+		$flexPack: start;
+	}
+	@else if $packContent == flex-end {
+		$boxPack: end;
+		$flexPack: end;
+	}
+	@else if $packContent == space-between {
+		$boxPack: justify;
+		$flexPack: justify;
+	}
+	@else if $packContent == space-around {
+		$boxPack: distribute;
+		$flexPack: distribute;
+	}
+
+	@include experimental(box-pack, $boxPack, -moz, -webkit, not -o, not -ms, not -khtml, official);
+	@include experimental(flex-pack, $flexPack, not -moz, not -webkit, not -o, -ms, not -khtml, not official);
+	@include experimental(justify-content, $packContent, -moz, -webkit, not -o, not -ms, not -khtml, official);
+}
+@mixin flex-align-items($alignItems: stretch) {
+	$alignItems: unquote($alignItems);
+	$boxAlign: $alignItems;
+	$flexAlign: $alignItems;
+
+	@if $alignItems == flex-start {
+		$boxAlign: start;
+		$flexAlign: start;
+	}
+	@else if $alignItems == flex-end {
+		$boxAlign: end;
+		$flexAlign: end;
+	}
+
+	@include experimental(box-align, $boxAlign, not -moz, -webkit, not -o, not -ms, not -khtml, official);
+	@include experimental(flex-align, $flexAlign, not -moz, not -webkit, not -o, -ms, not -khtml, not official);
+	@include experimental(align-items, $alignItems, -moz, -webkit, not -o, not -ms, not -khtml, official);
+}
+@mixin flex-align-self($value: auto) {
+	.flexboxlegacy &,
+	.flexbox & {
+		$v: value;
+		@if $value == flex-start {
+			$v: start;
+		}
+		@else if $value == flex-end {
+			$v: end;
+		}
+		@include experimental(flex-item-align, $v, not -moz, not -webkit, not -o, -ms, not -khtml, not official);
+	}
+	.flexbox & {
+		@include experimental(align-self, $value, -moz, -webkit, not -o, not -ms, not -khtml, official);
+	}
+}
+
+
+@mixin display-flexbox($display: flex, $direction: row, $packContent: flex-start, $alignItems: stretch, $wrap: nowrap) {
+	@include flexbox($display);
+	@include flex-direction($direction);
+	@include flex-justify-content($packContent);
+	@include flex-align-items($alignItems);
+	@include flex-wrap($wrap);
+}

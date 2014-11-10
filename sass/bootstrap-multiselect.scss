@@ -1,0 +1,64 @@
+@import "compass";
+
+.multiselect-container {
+	list-style-type: none;
+	margin: 0;
+	position: absolute;
+
+	.input-group {
+		margin: 5px;
+	}
+
+	&,
+	> li {
+		padding: 0;
+	}
+
+	> li {
+
+		> a.multiselect-all label,
+		> label.multiselect-group {
+			font-weight: 700;
+		}
+
+		> label.multiselect-group {
+			height: 100%;
+			margin: 0;
+			padding: 3px 20px;
+		}
+
+		> a {
+			padding: 0;
+
+			> label {
+				cursor: pointer;
+				font-weight: 400;
+				height: 100%;
+				padding: 3px 20px 3px 40px;
+
+				&,
+				&.radio,
+				&.checkbox {
+					margin: 0;
+				}
+
+				> input[type=checkbox] {
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+}
+.btn-group {
+
+	> .btn-group {
+
+		&:nth-child(2) {
+
+			> .multiselect.btn {
+				@include border-top-left-radius(4px);
+				@include border-bottom-left-radius(4px);
+			}
+		}
+	}
+}

@@ -1,0 +1,88 @@
+/* ==========================================================================
+	Nav
+============================================================================= */
+
+.menu-title {
+    background-color: #223d4f;
+    color: $white;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    margin: 0;
+    padding: 5px 31px;
+    text-transform: uppercase;
+
+    a {
+        color: #808285;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    i {
+        font-size: 10px;
+        font-weight: normal;
+    }
+}
+.nav,
+.navbar {
+
+    a {
+        text-decoration: none;
+    }
+}
+.navbar,
+.navbar-inverse {
+    @include border-radius(0);
+    background-color: $white;
+    @include background-image(none);
+    border: none;
+}
+.navbar {
+
+    .pull-right > li.open > .dropdown-menu,
+    .nav > li.open > .dropdown-menu.pull-right {
+        margin-right: -6px;
+        margin-top: 7px;
+    }
+
+    .nav {
+
+        > li {
+
+            > .dropdown-menu {
+
+                &:before,
+                &:after {
+                    @include inline-block;
+                    content: '';
+                    position: absolute;
+                }
+
+                &:before {
+                    border: solid transparent;
+                    border-bottom-color: #ccc;
+                    border-bottom-color: rgba(0, 0, 0, 0.2);
+                    border-width: 0 7px 7px;
+                    right: 9px;
+                    top: -7px;
+                }
+
+                &:after {
+                    border: solid transparent;
+                    border-bottom-color: $white;
+                    border-width: 0 6px 6px;
+                    right: 10px;
+                    top: -6px;
+                }
+            }
+        }
+    }
+}
+.nav-collapse {
+
+    &.collapse {
+        height: 100%;
+    }
+}

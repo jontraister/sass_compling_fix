@@ -1,0 +1,202 @@
+﻿/* ==========================================================================
+	Chase Payment Form 
+============================================================================= */
+label {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 20px;
+  color: #55606e;
+  display: inline-block;
+  margin-bottom: 5px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  width: 133px;
+  margin-left: 0px; }
+
+input {
+  border: 1px solid #E5E9EC;
+  font-size: 13px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-appearance: none;
+  color: #282323;
+  outline: 0;
+  height: 37px;
+  line-height: 15px;
+  font-weight: normal;
+  vertical-align: top;
+  min-height: 37px;
+  transition: background 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  display: block;
+  width: 100%;
+  margin: 0 0 20px 0;
+  text-indent: 15px;
+  color: #555; }
+
+select {
+  border: 1px solid #E5E9EC;
+  font-size: 13px;
+  box-shadow: none;
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  line-height: 1.42857;
+  color: #555;
+  background-color: #fff;
+  background: none;
+  border-radius: 4px;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  outline: none;
+  height: 37px !important;
+  min-height: 34px; }
+
+tr {
+  width: 100%; }
+
+@media (max-width: 950px) {
+  .mainTable {
+    width: 100% !important; } }
+
+@media (max-width: 375px) {
+  input {
+    width: 260px !important; }
+  #state {
+    width: 104px !important; }
+  .creZipField {
+    margin-left: 20px !important;
+    width: 155px !important; }
+  #creProvinceState {
+    width: 104px !important; } }
+
+.completeButton {
+  cursor: pointer;
+  color: white;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border: none;
+  text-shadow: none;
+  box-shadow: none;
+  transition: all 0.12s linear 0s;
+  -webkit-transition: all 0.12s linear 0s;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 6px 12px;
+  margin-top: 10px;
+  background: none;
+  background-color: #ee7a19;
+  margin-right: -11px; }
+
+.cancelButton {
+  /*cursor: pointer;
+	color: #5e5e5e;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 20px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border: 1px solid #b4b9be;
+	text-shadow: none;
+	box-shadow: none;
+	transition: all 0.12s linear 0s;
+	-webkit-transition: all 0.12s linear 0s;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	padding: 6px 12px;
+	margin-top: 10px;
+	background: none;
+	background-color: #ffffff;
+	margin-right: -11px;*/
+  display: none; }
+
+.creCVV2WhatLink {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 20px;
+  color: #55606e;
+  display: inline-block;
+  margin-bottom: 5px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+
+.creButtonLabel {
+  text-align: right; }
+
+.creZipField {
+  padding: 0px;
+  margin-left: 20px;
+  width: 100px;
+  margin-top: -9px; }
+
+.creTypeRow {
+  height: 65px; }
+
+.mainTable {
+  width: 100%; }
+
+.creAddressTwoLabel label {
+  color: #fff !important; }
+
+.creAmountLabel, .creAmountField, .creAmountRow {
+  display: none; }
+
+#amountDisplay {
+  text-indent: 15px;
+  color: #555; }
+
+.creExpirationMonthField {
+  width: 50%;
+  float: left; }
+
+label[for=expYear] {
+  float: left;
+  width: 0%; }
+
+.creExpirationYearField {
+  width: 49%;
+  float: left;
+  margin-left: 1%; }
+
+#creProvinceState {
+  width: 1190px; }
+
+.creNameLabel label::after {
+  content: "*";
+  color: #ee7a19; }
+
+.creAddressOneLabel label::after {
+  content: "*";
+  color: #ee7a19; }
+
+.creCityLabel label::after {
+  content: "*";
+  color: #ee7a19; }
+
+.creStateLabel label::after {
+  content: "*";
+  color: #ee7a19; }
+
+.creNumberLabel label::after {
+  content: "*";
+  color: #ee7a19; }
+
+.creCVV2Label label::after {
+  content: "*";
+  color: #ee7a19; }
+
+.creTypeLabel label::after {
+  content: "*";
+  color: #ee7a19; }
+
+.creExpirationLabel label::after {
+  content: "*";
+  color: #ee7a19; }

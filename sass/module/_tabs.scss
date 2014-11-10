@@ -1,0 +1,237 @@
+/* ==========================================================================
+	Tabs
+============================================================================= */
+
+.tab-content {
+    background-color: $white;
+    margin-bottom: 18px;
+    overflow: auto;
+    overflow: hidden;
+    position: relative;
+    z-index: #{$top-z-index/1000000};
+
+    > .tab-pane {
+    	display: none;
+    	padding: 15px;
+    }
+
+    > .active {
+        display: block;
+        padding: 20px;
+    }
+
+    &.tab-form {
+        margin-bottom: 0;
+
+        > .tab-pane {
+            padding: 0;
+
+            .content-inner {
+                padding: 20px 20px 5px;
+            }
+
+            .content-footer {
+                @include background($lightest);
+                padding: 20px;
+                text-align: right;
+
+                input[type=submit],
+                button[type=submit],
+                a.btn-success,
+                .btn-next {
+                    margin-left: 15px;
+                }
+            }
+        }
+
+        > .active {
+            padding: 0px;
+        }
+    }
+}
+.nav-tabs {
+    background-color: #d0dade;
+    margin-bottom: 0;
+
+    > li {
+        padding-left: 0;
+
+        > a {
+            @include border-radius(0);
+            border: 0;
+            color: #8e9aa2;
+            min-width: 70px;
+            padding: 15px 20px;
+            text-decoration: none;
+
+            i {
+                margin-right: 5px;
+            }
+        }
+    }
+}
+.nav-tabs {
+
+    > .active {
+
+        > a {
+
+            &,
+            &:hover,
+            &:focus {
+                @include border-top-left-radius(3px);
+                @include border-top-right-radius(3px);
+                @include box-shadow(1px 1px 2px rgba(0,0,0,.1));
+                border: 0!important;
+                border-width: 0;
+                color: #505458;
+            }
+        }
+    }
+}
+.form-wizard-steps {
+    padding: 30px 30px 40px;
+}
+.wizard-steps {
+    list-style: none outside none;
+    padding: 0;
+    position: relative;
+    width: 100%;
+
+    &,
+    li,
+    li:before {
+        display: block;
+    }
+
+    li {
+        float: left;
+        max-width: 33%;
+        min-width: 33%;
+        padding-left: 0;
+        text-align: center;
+
+        a {
+
+            &,
+            &:hover,
+            &:active,
+            &:focus {
+                cursor: default;
+                text-decoration: none;
+            }
+        }
+
+        &:before {
+            border-top: 6px solid #55606e;
+            content: "";
+            font-size: 0;
+            overflow: hidden;
+            position: relative;
+            right: 1px;
+            top: 13px;
+            width: 100%;
+            z-index: 1;
+        }
+
+        &:first-child {
+
+            &:before {
+                left: 50%;
+                max-width: 50%;
+            }
+        }
+
+        &:last-child {
+
+            &:before {
+                max-width: 50%;
+                width: 50%;
+            }
+        }
+
+        &.complete {
+
+            .step {
+                background-color: $brand-success;
+                border: 4px solid $brand-success;
+                padding: 1px 6px;
+            }
+        }
+
+        .step {
+            @include border-radius(32px);
+            @include transition(all .2s linear 0s);
+            background-color: #d1dade;
+            color: $white;
+            display: inline;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 12px;
+            padding: 4px 9px;
+            position: relative;
+            text-align: center;
+            z-index: 2;
+
+            i {
+                font-size: 10px;
+                font-weight: 400;
+                position: relative;
+                top: -1.5px;
+            }
+        }
+
+        .title {
+            color: #b1bcc5;
+            display: block;
+            font-size: 13px;
+            line-height: 15px;
+            max-width: 100%;
+            position: relative;
+            table-layout: fixed;
+            text-align: center;
+            top: 20px;
+            //word-wrap: break-word;
+            z-index: #{$top-z-index/100000 + 4};
+        }
+
+        &.active {
+
+            .step,
+            &.complete .step {
+                background-color: $gray;
+                border: none;
+                color: $white;
+                font-size: 16px;
+                font-weight: 700;
+                padding: 10px 15px;
+            }
+
+            .step {
+                background-color: $brand-warning;
+            }
+        }
+
+        &.complete,
+        &.active {
+
+            .title {
+                color: #2b3d53;
+            }
+        }
+    }
+}
+.wizard-actions {
+    @include background(#f4f6f7);
+    display: block;
+    list-style: none outside none;
+    margin: 0;
+    padding: 30px;
+    position: relative;
+    width: 100%;
+
+    li {
+        display: inline;
+        padding-left: 0;
+    }
+}
